@@ -14,8 +14,6 @@
 
 ## Download and Installation
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/grayscale/)
 * Install via npm: `npm install`
 * Run: `npm start` - it will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. 
 
