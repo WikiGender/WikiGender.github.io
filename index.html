@@ -36,13 +36,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+            <a class="nav-link js-scroll-trigger" href="#linguistic-bias">Linguistic Bias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#topic-bias">Topic Bias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#occ-bias">Occupation Bias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
@@ -56,29 +59,275 @@
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <h1 class="mx-auto my-0 text-uppercase">WikiGender</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Exploring gender bias in the overview of Wikipedia biographies.</h2>
+        <a href="#other" class="btn btn-primary js-scroll-trigger">Discover More</a>
       </div>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="about-section text-center">
+  <section id="other" class="about-section text-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <h1 class="text-white mb-4">Did you know...</h1>
+          <h2 class="text-white mb-4">Only 17% of the biographies in the english Wikipedia are related to women.</h2>
+          <h3 class="text-white mb-4">Surprised? Well, so were we</h3>
+          <p class="text-white-50">INTRO TEXT  </p>
+        </div>
+      
+    </div>
+
+
+  </section>
+
+  <!-- Projects Section -->
+  <section id="introduction" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Gender Distribution -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/gender_dist.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text-left text-center text-lg-left">
+            <h4>Gender distribution among biographies</h4>
+            <p class="text-black-50 mb-0">In 2017, the english wikipedia contained <br>1384171. Among them, only 16.5% belonged to women. </p>
+          </div>
         </div>
       </div>
-      <img src="img/ipad.png" class="img-fluid" alt="">
+
+      <!-- Comment about distribution -->
+      <div>
+        <p class="inter-text text-black-50 mb-0 text-center">One thing you may think at this point is, "okey but not everyone appears in Wikipedia". This is actually true. Although it is possible to create your own Wikiepdia page, most biographies belong to people recognized in their field. So one detail we can explore further is the occupation of the different personalities. To do so, we group the occupations in field to get a more general view. </p>
+      </div>
+
+      <!-- Occupation distribution--> 
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-6 col-lg-6">
+          <div class="featured-text-right text-center text-lg-right">
+            <h4 class="text-black">Occupation Distribution</h4>
+            <p class="mb-0 text-black-50">The most common field of occupation is Sport (30%), followed by Artist (29%) and Politics (16%). Sport field includes occupations like "footballer", "cricketer" or "swimmer". Inside the Artist field we can find occupations like "singer", "painter" or "actor/actress"</p>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/gender_dist.png" alt="">
+        </div>
+        
+      </div>
+
+
+
+      <!-- Gender by occupation -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-none text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-black">Gender by occupation</h4>
+                <p class="mb-0 text-black-50">We explore also the gender by occupation. Only the field corresponding to "Model" has more female presence than male. In all other fields, the presence of men is higher. When disaggregated, we can see that the most common ocupation for females belongs to the "Artist" field and "Sport" moves to the second place.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="inter-text text-black-50 mb-0 text-center">Nevertheless, the absolute values may not be very informative. That is why we compute the ratio female:male so that you can get an idea of how gender diverse the different occupations are. </p>
+      </div>
+
+      <!-- Ratio female:male by occupation -->
+      <div class="row justify-content-center no-gutters">
+        
+        <div class="col-lg-6">
+            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-none text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-black">Ratio female:male by occupation</h4>
+                <p class="mb-0 text-black-50"> As we saw before, female biographies are less represented in all fields except Model which is associated to the mode industry. In this case, for each 5 biographies related to female characters we have one male biography.</p>
+                <p class="mb-0 text-black-50"> Religion and Military are the groups where the ratio female:male becomes larger. In religion related biographies, for each female we will find 69 males. In military related ones, for each female we will find 62 males</p>
+                <p class="mb-0 text-black-50"> The most balanced occupational field is Artist where the ratio female:male is of 1:3</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!--LINGUISTIC BIAS -->
+  <section id="linguistic-bias" class="projects-section bg-light">
+    <div class="container">
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <h4> After this first exploration, we want to dig deeper. We want to explore the way male and female are portrayed in terms of the words used to describe them. In the following sections we will explore the linguistic and topic bias in the overview of the different biographies.</h4>
+      </div>
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <p></p>
+        <h1>Linguistic Bias. </h1>
+      </div>
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <p>In this section we analyze the adjectives used to describe the different characters. We use the subjectivity lexicon version used in "Theresa Wilson, Janyce Wiebe, and Paul Hoffmann (2005). Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis. Proc. of HLT-EMNLP-2005." [1]. This allows to determine the degree of subjectivity of the vocabularity and if the given adjectives are usually employed with a positive or negative connotation.</p>
+        <p>First, we start by associating each adjective with its subjectivity and strength values. We then visualize the most common adjectives by gender and their associated degree of strength (negative, positive or neutral). Finally, we study the usage of strongly subjective adjectives based on the gender.</p>
+        <h4>Feel curious about the results? Keep reading for more insights!</h4>
+      </div>
+
+
+      <!-- Most common words-->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="featured-text text-center">
+            <h4>Most common adjectives</h4>
+            <p class="text-black-50 mb-0">These word clouds show the 500 most common adjectives used in male and female biographies. The size of the word is proportional to the frequency of appearance while the color represents the connotation. In blue we see the adjectives ranked as positive, in orange the ones ranked negative and in grey the ones considered as neutral.</p>
+            
+          </div>
+          <div class="col-xl-12 col-lg-2"></div>
+        <div class="col-xl-12 col-lg-8">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/wordcloud.png" alt="">
+        </div>
+        <div class="col-xl-12 col-lg-2"></div>
+        
+        
+        <div class="col-xl-12 col-lg-12">
+          <div class="featured-text text-center">
+            <p class="text-black-50 mb-0">For both genders we see a higher presence of positive-related words as well as some shared adjectives as we showed in the previous subsection. Given the results of this first inspection, we will conduct further quantitative research to see the usage of positive versus negative connoted words and their degree of subjectivity.</p>
+          </div>
+        
+        </div>
+      </div>
+
+      
+
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="featured-text text-center">
+            
+            <p class="text-black-50 mb-0 text-center">After analysing the distribution of adjectives along the overviews, we can see the distribution of strengths and subjectivities is similar for both genders. In both cases, the usage of negative words to describe the different characters is lower than the positive ones and the adjectives used are mostly weakly subjective. In terms of strongly subjective words, again the positive ones are more used than the negatives and they are equally distributed for both genders.</p>
+
+            <p class="text-black-50 mb-0 text-center">For both genders there is a higher presence of positive-related words as well as some shared adjectives as we showed in the previous subsection. Given the results of this first inspection, we conduct further quantitative research to see the usage of positive versus negative connoted words and their degree of subjectivity.</p>
+            
+          </div>
+          <div class="col-xl-12 col-lg-12">
+          <div class="col-xl-4 col-lg-4" style="overflow-x:auto;">
+        
+          <table style="width: 80%;" border="1" cellpadding="2">
+                <tr>
+                  <th align="center">Subjectivity</th>
+                  <th align="center">% in Female Biographies</th>
+                  <th align="center">% in Male Biographies</th>
+                 
+                </tr>
+                <tr>
+                  <td align="center">Negative</td>
+                  <td align="center">19.79</td>
+                  <td align="center">20.41</td>
+                </tr>
+                <tr>
+                  <td align="center">Neutral</td>
+                  <td align="center">15.71</td>
+                  <td align="center">64.54</td>
+                </tr>
+                <tr>
+                  <td align="center">Positive</td>
+                  <td align="center">15.05</td>
+                  <td align="center">64.51</td>
+                </tr>
+          </table>
+         </div>
+        
+        <div class="col-xl-8 col-lg-8" style="overflow-x:auto;">
+        
+          <table style="width: 80%;" border="1" cellpadding="2">
+                <tr>
+                  <th align="center">Strength</th>
+                  <th align="center">Subjectivity</th>
+                  <th align="center">% in Female Biographies</th>
+                  <th align="center">% in Male Biographies</th>
+                 
+                </tr>
+                <tr>
+                  <td align="center">Strongly Subjective</td>
+                  <td align="center">Negative</td>
+                  <td align="center">8.64</td>
+                  <td align="center">9.07</td>
+                </tr>
+                <tr>
+                  <td align="center">Strongly Subjective</td>
+                  <td align="center">Positice</td>
+                  <td align="center">21.92</td>
+                  <td align="center">21.68</td>
+                </tr>
+          </table>
+         </div>
+
+         </div>
+        
+        <div class="col-xl-12 col-lg-6">
+          <div class="featured-text text-center text-center">
+            <p class="text-black-50 mb-0">In terms of strongly subjective words, again the positive ones are more used than the negatives and they are equally distributed for both genders. Given the analysis about the adjectives conducted up to now, we are still not able to distinguish if there exist a clear linguistic bias in the usage of the words. Nevertheless, the following section will introduce new insights to the discussion.</p>
+          </div>
+        
+        </div>
+      </div>
+
+
+
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6 center">
+          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Misty</h4>
+                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Mountains</h4>
+                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light">
+  <section id="topic-bias" class="projects-section bg-light">
     <div class="container">
 
       <!-- Featured Project Row -->
@@ -134,7 +383,7 @@
   </section>
 
   <!-- Signup Section -->
-  <section id="signup" class="signup-section">
+  <section id="occ-bias" class="signup-section">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
