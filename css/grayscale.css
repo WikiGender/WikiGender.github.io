@@ -90,7 +90,7 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -102,7 +102,7 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background-color: rgba(255, 255, 255, 1);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -180,9 +180,14 @@
 }
 
 @media (min-width: 992px) {
-  .projects-section .featured-text {
+  .projects-section .featured-text-left {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #64a19d;
+  }
+
+  .projects-section .featured-text-right {
+    padding: 0 2rem 0 0;
+    border-right: 0.5rem solid #64a19d;
   }
 }
 
@@ -190,6 +195,12 @@
   padding: 3rem;
   font-size: 90%;
 }
+
+.projects-section .inter-text {
+  padding: 2rem;
+  font-size: 120%;
+}
+
 
 @media (min-width: 992px) {
   .projects-section .project-text {
