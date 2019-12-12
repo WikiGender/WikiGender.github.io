@@ -23,6 +23,36 @@
 
 </head>
 
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
 <body id="page-top">
 
   <!-- Navigation -->
@@ -166,6 +196,11 @@
         </div>
       </div>
 
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <h4> After this first exploration, we want to dig deeper. We want to explore the way male and female are portrayed in terms of the words used to describe them. In the following sections we will explore the linguistic and topic bias in the overview of the different biographies.</h4>
+      </div>
+
     </div>
 
 
@@ -174,10 +209,6 @@
   <!--LINGUISTIC BIAS -->
   <section id="linguistic-bias" class="projects-section bg-light">
     <div class="container">
-
-      <div class="inter-text text-black-50 mb-0 text-center">
-        <h4> After this first exploration, we want to dig deeper. We want to explore the way male and female are portrayed in terms of the words used to describe them. In the following sections we will explore the linguistic and topic bias in the overview of the different biographies.</h4>
-      </div>
 
       <div class="inter-text text-black-50 mb-0 text-center">
         <p></p>
@@ -225,6 +256,8 @@
           </div>
 
           <div class="container">
+
+            <p class="text-black-50 mb-0 text-center">PUT PLOT WITH COLORS AND FANCY THINGSy.</p>
       
           <!-- Grid row -->
           <div class="row text-center">
@@ -294,17 +327,38 @@
 
 
 
-      <!-- Project One Row -->
+      <!-- Overviews Examples - Venus W and Roger F -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6 center">
-          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+        <div class="col-lg-5 center">
+          <div class="bg-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Venus Williams</h4>
+
+                <p class="mb-0 text-white-50" align="justify">Venus Ebony Starr Williams (born June 17, 1980) is an American professional tennis player. A former world No. 1, Williams is generally credited with ushering in a new era of power on the women's professional tennis tour.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Williams has been ranked world No. 1 by the Women's Tennis Association on three occasions, for a total of 11 weeks. She first reached the No. 1 ranking on February 25, 2002, the first African American woman to do so in the Open Era, and the second all time since Althea Gibson. Williams' seven Grand Slam singles titles are tied for 12th on the all-time list, and 8th on the Open Era list, more than any other active female player except her sister. She has reached 16 Grand Slam finals, most recently at Wimbledon in 2017. She has also won 14 Grand Slam Women's doubles titles, all with Serena Williams; the pair is unbeaten in Grand Slam doubles finals. Williams also has two Mixed Doubles titles. Her five Wimbledon singles titles tie her with two other women for eighth place on the all-time list, but gives her sole possession of No. 4 on the Open Era List, trailing only the nine titles of Martina Navratilova and the seven of Serena Williams and Steffi Graf. From the 2000 Wimbledon Championships to the 2001 US Open, Williams won four of the six Grand Slam singles tournaments in that span. At the 2019 US Open, Williams extended her record as the all-time leader, male or female, in Grand Slams played, with 84.[9] With her run to the 2017 Wimbledon singles final, she broke the record for longest time between first and most recent grand slam singles finals appearances. Williams was twice the season prize money leader in 2001 and 2017.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Williams has won four Olympic gold medals, one in singles and three in women's doubles, along with a silver medal in mixed doubles, pulling even with Kathleen McKane Godfree for the most Olympic medals won by a male or female tennis player. She is the only tennis player to have won a medal at four Olympic Games. At the 2000 Sydney Olympics, Williams became only the second player to win Olympic gold medals in both singles and doubles at one Olympic Games, after Helen Wills Moody at the 1924 Summer Olympics.</p>
+
+                <p class="mb-0 text-white-50" align="justify">With 49 singles titles, Williams trails only her sister Serena Williams among active players on the WTA Tour with most singles titles. Her 35-match winning streak from the 2000 Wimbledon Championships to the 2000 Generali Ladies Linz tournament final is the longest since January 1, 2000. She is also one of only three active WTA players to have reached the finals of all four Grand Slams, along with Serena Williams and Maria Sharapova.</p>
+                
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6">
+
+        <div class="col-lg-5 center">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Misty</h4>
-                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <h4 class="text-white">Roger Federer</h4>
+                <p class="mb-0 text-white-50" align="justify">Roger Federer (born 8 August 1981) is a Swiss professional tennis player who is ranked world No. 3 in men's singles tennis by the Association of Tennis Professionals (ATP). He has won 20 Grand Slam singles titles—the most in history by a male player—and has held the world No. 1 spot in the ATP rankings for a record total of 310 weeks (including a record 237 consecutive weeks) and was the year-end No. 1 five times, including four consecutive. Federer, who turned professional in 1998, was continuously ranked in the top ten from October 2002 to November 2016.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Federer has won a record eight Wimbledon titles, six Australian Open titles, five US Open titles (all consecutive, a record), and one French Open title. He is one of eight men to have achieved a Career Grand Slam. Federer has reached a record 31 men's singles Grand Slam finals, including 10 consecutively from the 2005 Wimbledon Championships to the 2007 US Open. Federer has also won a record six ATP Finals titles, 28 ATP Tour Masters 1000 titles, and a record 24 ATP Tour 500 titles. Federer was a member of Switzerland's winning Davis Cup team in 2014. He is also the only player after Jimmy Connors to have won 100 or more career singles titles, as well as to amass 1,200 wins in the Open Era.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Federer's all-court game and versatile style of play involve exceptional footwork and shot-making. Effective both as a baseliner and a volleyer, his apparent effortlessness and efficient movement on the court have made Federer highly popular among tennis fans. He has received the tour Sportsmanship Award 13 times and been named the ATP Player of the Year and ITF World Champion five times. He has won the Laureus World Sportsman of the Year award a record five times, including four consecutive awards from 2005 to 2008. He is also the only person to have won the BBC Overseas Sports Personality of the Year award four times.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -312,23 +366,49 @@
         </div>
       </div>
 
+      <div class="col-xl-12 col-lg-6" align="center">
+          <div class="inter-text text-center text-center" >
+            <p class="text-black-50 mb-0" align="justify">When we observe these two overviews, we cannot spot many difference in terms of the words used to describe them. In both cases, they are described as "professional tennis player", it is an emphasis on their awards and performance along their careers and some insight about other personal details.</p>
+          </div>
+
+          <div class="inter-text text-center text-center">
+            <h3>But, what if we took a deeper look?</h3>
+          </div>
+
+          <div class="inter-text text-center text-center">
+            <p class="text-black-50 mb-0" align="justify">In order to analyse if there exists a difference between the descriptions based on the gender, we have developed a model using machine learning techniques. This model receives as input a series of words appearing in the overview we want to analyse. Its output is the probability that the overview belongs to a woman.</p>
+            <p class="text-black-50 mb-0" align="justify">The idea behind this model is that if both genders are equally described, the model won't be able to identify the corresponding gender. In case it is able to perform an assignment, it means there is something in the data that can be learnt in order to identifying the gender. In other words, it means there is a bias.</p>
+          </div>
+        
+        </div>
       <!-- Project Two Row -->
       <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Mountains</h4>
-                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <h4 class="text-white">MODEL STUFF</h4>
+                <p class="mb-0 text-white-50">HERE WE SHOULD PUT SOMETHING RELATED TO THE MODEL, THE WORDS SCORING HIGHER AND SO ON</p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
           </div>
         </div>
       </div>
+
+
+      <!--Linguistic bias explanation--> 
+      <div class="container">
+          <div class="inter-text text-center" >
+            <p class="text-black-50 mb-0" align="justify">Given the previous results, we can state there is a bias in the adjective usage based on gender.</p>
+            <p class="text-black-50 mb-0" align="justify">Linguistic biases is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s).</p>
+          </div>
+        
+        </div>
+      
 
     </div>
   </section>
@@ -378,7 +458,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
                 <h4 class="text-white">Mountains</h4>
-                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <div w3-include-html="try.html"></div> 
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
@@ -607,6 +687,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
+  <script>includeHTML();</script>
 
 </body>
 
