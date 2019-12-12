@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <section id="linguistic-bias" class="projects-section bg-light">
+    <div class="container">
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <p></p>
+        <h1>Linguistic Bias. </h1>
+      </div>
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <p>In this section we analyze the adjectives used to describe the different characters. We use the subjectivity lexicon version used in "Theresa Wilson, Janyce Wiebe, and Paul Hoffmann (2005). Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis. Proc. of HLT-EMNLP-2005." [1]. This allows to determine the degree of subjectivity of the vocabularity and if the given adjectives are usually employed with a positive or negative connotation.</p>
+        <p>First, we start by associating each adjective with its subjectivity and strength values. We then visualize the most common adjectives by gender and their associated degree of strength (negative, positive or neutral). Finally, we study the usage of strongly subjective adjectives based on the gender.</p>
+        <h4>Feel curious about the results? Keep reading for more insights!</h4>
+      </div>
+
+
+      <!-- Most common words-->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="inter-text text-center">
+            <h4>Most common adjectives</h4>
+            <p class="text-black-50 mb-0">These word clouds show the 500 most common adjectives used in male and female biographies. The size of the word is proportional to the frequency of appearance while the color represents the connotation. In blue we see the adjectives ranked as positive, in orange the ones ranked negative and in grey the ones considered as neutral.</p>
+            
+          </div>
+          <div class="col-xl-12 col-lg-2"></div>
+        <div class="col-xl-12 col-lg-8">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/wordcloud.png" alt="">
+        </div>
+        <div class="col-xl-12 col-lg-2"></div>
+        
+        
+        <div class="col-xl-12 col-lg-12">
+          <div class="inter-text text-center">
+            <p class="text-black-50 mb-0">For both genders we see a higher presence of positive-related words as well as some shared adjectives as we showed in the previous subsection. Given the results of this first inspection, we will conduct further quantitative research to see the usage of positive versus negative connoted words and their degree of subjectivity.</p>
+          </div>
+        
+        </div>
+      </div>
+
+      
+
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="inter-text text-center">
+            
+            <p class="text-black-50 mb-0 text-center">After analysing the distribution of adjectives along the overviews, we can see the distribution of strengths and subjectivities is similar for both genders. In both cases, the usage of negative words to describe the different characters is lower than the positive ones and the adjectives used are mostly weakly subjective. In terms of strongly subjective words, again the positive ones are more used than the negatives and they are equally distributed for both genders.</p>
+
+            <p class="text-black-50 mb-0 text-center">For both genders there is a higher presence of positive-related words as well as some shared adjectives as we showed in the previous subsection. Given the results of this first inspection, we conduct further quantitative research to see the usage of positive versus negative connoted words and their degree of subjectivity.</p>
+            
+          </div>
+
+          <div class="container">
+
+            <p class="text-black-50 mb-0 text-center">PUT PLOT WITH COLORS AND FANCY THINGSy.</p>
+      
+          <!-- Grid row -->
+          <div class="row text-center">
+            <div class="col-xl-4 col-lg-4" style="overflow-x:auto;">
+          
+            <table style="width: 80%;" border="1" cellpadding="2">
+                  <tr>
+                    <th align="center">Subjectivity</th>
+                    <th align="center">% in Female Biographies</th>
+                    <th align="center">% in Male Biographies</th>
+                   
+                  </tr>
+                  <tr>
+                    <td align="center">Negative</td>
+                    <td align="center">19.79</td>
+                    <td align="center">20.41</td>
+                  </tr>
+                  <tr>
+                    <td align="center">Neutral</td>
+                    <td align="center">15.71</td>
+                    <td align="center">64.54</td>
+                  </tr>
+                  <tr>
+                    <td align="center">Positive</td>
+                    <td align="center">15.05</td>
+                    <td align="center">64.51</td>
+                  </tr>
+            </table>
+           </div>
+        
+          <div class="col-xl-8 col-lg-8" style="overflow-x:auto;">
+          
+            <table style="width: 80%;" border="1" cellpadding="2">
+                  <tr>
+                    <th align="center">Strength</th>
+                    <th align="center">Subjectivity</th>
+                    <th align="center">% in Female Biographies</th>
+                    <th align="center">% in Male Biographies</th>
+                   
+                  </tr>
+                  <tr>
+                    <td align="center">Strongly Subjective</td>
+                    <td align="center">Negative</td>
+                    <td align="center">8.64</td>
+                    <td align="center">9.07</td>
+                  </tr>
+                  <tr>
+                    <td align="center">Strongly Subjective</td>
+                    <td align="center">Positice</td>
+                    <td align="center">21.92</td>
+                    <td align="center">21.68</td>
+                  </tr>
+            </table>
+           </div>
+         </div>
+       </div>
+        
+        <div class="col-xl-12 col-lg-6">
+          <div class="inter-text text-center text-center">
+            <p class="text-black-50 mb-0">In terms of strongly subjective words, again the positive ones are more used than the negatives and they are equally distributed for both genders. Given the analysis about the adjectives conducted up to now, we are still not able to distinguish if there exist a clear linguistic bias in the usage of the words. Nevertheless, the following section will introduce new insights to the discussion.</p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+
+
+      <!-- Overviews Examples - Venus W and Roger F -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-5 center">
+          <div class="bg-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Venus Williams</h4>
+
+                <p class="mb-0 text-white-50" align="justify">Venus Ebony Starr Williams (born June 17, 1980) is an American professional tennis player. A former world No. 1, Williams is generally credited with ushering in a new era of power on the women's professional tennis tour.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Williams has been ranked world No. 1 by the Women's Tennis Association on three occasions, for a total of 11 weeks. She first reached the No. 1 ranking on February 25, 2002, the first African American woman to do so in the Open Era, and the second all time since Althea Gibson. Williams' seven Grand Slam singles titles are tied for 12th on the all-time list, and 8th on the Open Era list, more than any other active female player except her sister. She has reached 16 Grand Slam finals, most recently at Wimbledon in 2017. She has also won 14 Grand Slam Women's doubles titles, all with Serena Williams; the pair is unbeaten in Grand Slam doubles finals. Williams also has two Mixed Doubles titles. Her five Wimbledon singles titles tie her with two other women for eighth place on the all-time list, but gives her sole possession of No. 4 on the Open Era List, trailing only the nine titles of Martina Navratilova and the seven of Serena Williams and Steffi Graf. From the 2000 Wimbledon Championships to the 2001 US Open, Williams won four of the six Grand Slam singles tournaments in that span. At the 2019 US Open, Williams extended her record as the all-time leader, male or female, in Grand Slams played, with 84.[9] With her run to the 2017 Wimbledon singles final, she broke the record for longest time between first and most recent grand slam singles finals appearances. Williams was twice the season prize money leader in 2001 and 2017.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Williams has won four Olympic gold medals, one in singles and three in women's doubles, along with a silver medal in mixed doubles, pulling even with Kathleen McKane Godfree for the most Olympic medals won by a male or female tennis player. She is the only tennis player to have won a medal at four Olympic Games. At the 2000 Sydney Olympics, Williams became only the second player to win Olympic gold medals in both singles and doubles at one Olympic Games, after Helen Wills Moody at the 1924 Summer Olympics.</p>
+
+                <p class="mb-0 text-white-50" align="justify">With 49 singles titles, Williams trails only her sister Serena Williams among active players on the WTA Tour with most singles titles. Her 35-match winning streak from the 2000 Wimbledon Championships to the 2000 Generali Ladies Linz tournament final is the longest since January 1, 2000. She is also one of only three active WTA players to have reached the finals of all four Grand Slams, along with Serena Williams and Maria Sharapova.</p>
+                
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 center">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Roger Federer</h4>
+                <p class="mb-0 text-white-50" align="justify">Roger Federer (born 8 August 1981) is a Swiss professional tennis player who is ranked world No. 3 in men's singles tennis by the Association of Tennis Professionals (ATP). He has won 20 Grand Slam singles titles—the most in history by a male player—and has held the world No. 1 spot in the ATP rankings for a record total of 310 weeks (including a record 237 consecutive weeks) and was the year-end No. 1 five times, including four consecutive. Federer, who turned professional in 1998, was continuously ranked in the top ten from October 2002 to November 2016.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Federer has won a record eight Wimbledon titles, six Australian Open titles, five US Open titles (all consecutive, a record), and one French Open title. He is one of eight men to have achieved a Career Grand Slam. Federer has reached a record 31 men's singles Grand Slam finals, including 10 consecutively from the 2005 Wimbledon Championships to the 2007 US Open. Federer has also won a record six ATP Finals titles, 28 ATP Tour Masters 1000 titles, and a record 24 ATP Tour 500 titles. Federer was a member of Switzerland's winning Davis Cup team in 2014. He is also the only player after Jimmy Connors to have won 100 or more career singles titles, as well as to amass 1,200 wins in the Open Era.</p>
+
+                <p class="mb-0 text-white-50" align="justify">Federer's all-court game and versatile style of play involve exceptional footwork and shot-making. Effective both as a baseliner and a volleyer, his apparent effortlessness and efficient movement on the court have made Federer highly popular among tennis fans. He has received the tour Sportsmanship Award 13 times and been named the ATP Player of the Year and ITF World Champion five times. He has won the Laureus World Sportsman of the Year award a record five times, including four consecutive awards from 2005 to 2008. He is also the only person to have won the BBC Overseas Sports Personality of the Year award four times.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-12 col-lg-6" align="center">
+          <div class="inter-text text-center text-center" >
+            <p class="text-black-50 mb-0" align="justify">When we observe these two overviews, we cannot spot many difference in terms of the words used to describe them. In both cases, they are described as "professional tennis player", it is an emphasis on their awards and performance along their careers and some insight about other personal details.</p>
+          </div>
+
+          <div class="inter-text text-center text-center">
+            <h3>But, what if we took a deeper look?</h3>
+          </div>
+
+          <div class="inter-text text-center text-center">
+            <p class="text-black-50 mb-0" align="justify">In order to analyse if there exists a difference between the descriptions based on the gender, we have developed a model using machine learning techniques. This model receives as input a series of words appearing in the overview we want to analyse. Its output is the probability that the overview belongs to a woman.</p>
+            <p class="text-black-50 mb-0" align="justify">The idea behind this model is that if both genders are equally described, the model won't be able to identify the corresponding gender. In case it is able to perform an assignment, it means there is something in the data that can be learnt in order to identifying the gender. In other words, it means there is a bias.</p>
+          </div>
+        
+        </div>
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-5">
+          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">MODEL STUFF</h4>
+                <p class="mb-0 text-white-50">HERE WE SHOULD PUT SOMETHING RELATED TO THE MODEL, THE WORDS SCORING HIGHER AND SO ON</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Linguistic bias explanation--> 
+      <div class="container">
+          <div class="inter-text text-center" >
+            <p class="text-black-50 mb-0" align="justify">Given the previous results, we can state there is a bias in the adjective usage based on gender.</p>
+            <p class="text-black-50 mb-0" align="justify">Linguistic biases is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s).</p>
+          </div>
+        
+        </div>
+      
+
+    </div>
+  </section>
+
+</body>
+
+</html>
