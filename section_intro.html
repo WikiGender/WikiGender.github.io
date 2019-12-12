@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WikiGender - Exploring bias in the overview of Wikipedia biographies</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+ <section id="introduction" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Gender Distribution -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-6 col-lg-5">
+          <div>
+              <a href="https://plot.ly/~natbolon/3/?share_key=8lzccMVcUK5VPR3YxP3x3g" target="_blank" title="gener_counts" style="display: block; text-align: center;"><img src="https://plot.ly/~natbolon/3.png?share_key=8lzccMVcUK5VPR3YxP3x3g" alt="gener_counts" style="max-width: 50%; background-color: rgba(255, 255, 255, 0);"  logo=false width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+              <script data-plotly="natbolon:3" sharekey-plotly="8lzccMVcUK5VPR3YxP3x3g" src="https://plot.ly/embed.js" async></script>
+          </div>
+
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text-left text-center text-lg-left">
+            <h4>Gender distribution among biographies</h4>
+            <p class="text-black-50 mb-0">In 2017, the english wikipedia contained <br>1384171. Among them, only 16.5% belonged to women. </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment about distribution -->
+      <div>
+        <p class="inter-text text-black-50 mb-0 text-center">One thing you may think at this point is, "okey but not everyone appears in Wikipedia". This is actually true. Although it is possible to create your own Wikiepdia page, most biographies belong to people recognized in their field. So one detail we can explore further is the occupation of the different personalities. To do so, we group the occupations in field to get a more general view. </p>
+      </div>
+
+      <!-- Occupation distribution--> 
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-6 col-lg-6">
+          <div class="featured-text-right text-center text-lg-right">
+            <h4 class="text-black">Occupation Distribution</h4>
+            <p class="mb-0 text-black-50">The most common field of occupation is Sport (30%), followed by Artist (29%) and Politics (16%). Sport field includes occupations like "footballer", "cricketer" or "swimmer". Inside the Artist field we can find occupations like "singer", "painter" or "actor/actress"</p>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/gender_dist.png" alt="">
+        </div>
+        
+      </div>
+
+      <!-- Gender by occupation -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-none text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-black">Gender by occupation</h4>
+                <p class="mb-0 text-black-50">We explore also the gender by occupation. Only the field corresponding to "Model" has more female presence than male. In all other fields, the presence of men is higher. When disaggregated, we can see that the most common ocupation for females belongs to the "Artist" field and "Sport" moves to the second place.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="inter-text text-black-50 mb-0 text-center">Nevertheless, the absolute values may not be very informative. That is why we compute the ratio female:male so that you can get an idea of how gender diverse the different occupations are. </p>
+      </div>
+
+      <!-- Ratio female:male by occupation -->
+      <div class="row justify-content-center no-gutters">
+        
+        <div class="col-lg-6">
+            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-none text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-black">Ratio female:male by occupation</h4>
+                <p class="mb-0 text-black-50"> As we saw before, female biographies are less represented in all fields except Model which is associated to the mode industry. In this case, for each 5 biographies related to female characters we have one male biography.</p>
+                <p class="mb-0 text-black-50"> Religion and Military are the groups where the ratio female:male becomes larger. In religion related biographies, for each female we will find 69 males. In military related ones, for each female we will find 62 males</p>
+                <p class="mb-0 text-black-50"> The most balanced occupational field is Artist where the ratio female:male is of 1:3</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <h4> After this first exploration, we want to dig deeper. We want to explore the way male and female are portrayed in terms of the words used to describe them. In the following sections we will explore the linguistic and topic bias in the overview of the different biographies.</h4>
+      </div>
+
+    </div>
+
+
+  </section>
+
+</body>
+
+</html>
