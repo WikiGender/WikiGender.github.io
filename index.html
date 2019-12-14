@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta name='description' content='>
+  <meta name='author' content='>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 
   <title>WikiGender - Exploring bias in the overview of Wikipedia biographies</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href='vendor/bootstrap/css/bootstrap.css' rel='stylesheet'>
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href='vendor/fontawesome-free/css/all.min.css' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' rel='stylesheet'>
 
   <!-- Custom styles for this template -->
-  <link href="css/grayscale.css" rel="stylesheet">
+  <link href='css/grayscale.css' rel='stylesheet'>
+
+  <script src='https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js'></script>
+  <script src='https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.3.4.min.js'></script>
 
 </head>
 
@@ -28,24 +31,24 @@
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
+  z = document.getElementsByTagName('*');
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
     /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
+    file = elmnt.getAttribute('w3-include-html');
     if (file) {
       /*make an HTTP request using the attribute value as the file name:*/
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          if (this.status == 404) {elmnt.innerHTML = 'Page not found.';}
           /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
+          elmnt.removeAttribute('w3-include-html');
           includeHTML();
         }
       }      
-      xhttp.open("GET", file, true);
+      xhttp.open('GET', file, true);
       xhttp.send();
       /*exit the function:*/
       return;
@@ -54,32 +57,32 @@ function includeHTML() {
 };
 </script>
 
-<body id="page-top">
+<body id='page-top'>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Wiki Gender</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
+    <div class='container'>
+      <a class='navbar-brand js-scroll-trigger' href='#page-top'>Wiki Gender</a>
+      <button class='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
         Menu
-        <i class="fas fa-bars"></i>
+        <i class='fas fa-bars'></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
+      <div class='collapse navbar-collapse' id='navbarResponsive'>
+        <ul class='navbar-nav ml-auto'>
+          <li class='nav-item'>
+            <a class='nav-link js-scroll-trigger' href='#introduction'>Introduction</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#linguistic-bias">Linguistic Bias</a>
+          <li class='nav-item'>
+            <a class='nav-link js-scroll-trigger' href='#linguistic-bias'>Linguistic Bias</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#topic-bias">Topic Bias</a>
+          <li class='nav-item'>
+            <a class='nav-link js-scroll-trigger' href='#topic-bias'>Topic Bias</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#occ-bias">Occupation Bias</a>
+          <li class='nav-item'>
+            <a class='nav-link js-scroll-trigger' href='#occ-bias'>Occupation Bias</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          <li class='nav-item'>
+            <a class='nav-link js-scroll-trigger' href='#team'>Team</a>
           </li>
         </ul>
       </div>
@@ -87,76 +90,242 @@ function includeHTML() {
   </nav>
 
   <!-- Header -->
-  <header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">WikiGender</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">Exploring gender bias in the overview of Wikipedia biographies.</h2>
-        <a href="#other" class="btn btn-primary js-scroll-trigger">Discover More</a>
+  <header class='masthead'>
+    <div class='container d-flex h-100 align-items-center'>
+      <div class='mx-auto text-center'>
+        <h1 class='mx-auto my-0 text-uppercase'>WikiGender</h1>
+        <h2 class='text-white-50 mx-auto mt-2 mb-5'>Exploring gender bias in the overview of Wikipedia biographies.</h2>
+        <a href='#other' class='btn btn-primary js-scroll-trigger'>Discover More</a>
       </div>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="other" class="about-section text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h1 class="text-white mb-4">Did you know...</h1>
-          <h2 class="text-white mb-4">Only 17% of the biographies in the english Wikipedia are related to women.</h2>
-          <h3 class="text-white mb-4">Surprised? Well, so were we</h3>
-          <p class="text-white-50">INTRO TEXT  </p>
+  <section id='other' class='about-section text-center'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-lg-8 mx-auto'>
+          <h1 class='text-white mb-4'>Did you know...</h1>
+          <h2 class='text-white mb-4'>Only 17% of the biographies in the english Wikipedia are related to women.</h2>
+          <h3 class='text-white mb-4'>Surprised? Well, so were we</h3>
+          <p class='text-white-50'>INTRO TEXT  </p>
         </div>
       
     </div>
   </section>
 
   <!-- Project introduction -->
-  <div w3-include-html="html/section_intro.html"></div>
+  <div w3-include-html='html/section_intro.html'></div>
 
   <!--Linguistic bias -->
-  <div w3-include-html="html/linguistic-bias.html"></div> 
+  <section id='linguistic-bias' class='projects-section bg-light'>
+    <div class='container'>
+
+      <div class='inter-text text-black-50 mb-0 text-center'>
+        <p></p>
+        <h1>Linguistic Bias. </h1>
+      </div>
+
+      <div>
+        <p class='inter-text text-black-50 mb-0 text-center' align='justify'>We began by studying the adjectives used in the overviews. Why not all the words? 
+        Adjectives are subject to higher subjectivity. It is not the same to say “he is a good actor” than “he is not a bad actor”. In other words, they allow the introduction of some more subjective perspective in what should be a completely objective description. 
+        </p>
+        <p class='inter-text text-black-50 mb-0 text-center' align='justify'>First, we extracted the different adjectives from the biographies and ranked them based on their subjectivity and strength. </p>
+      </div>
 
 
-<!--  <div class="container">
-    <div class="col-8">
-        <a href="https://plot.ly/~natbolon/14/?share_key=N2aaqMGG2HXwmTSaYOq8vA" target="_blank" title="skdfjaldsfj" style="display: block; text-align: center;"><img src="https://plot.ly/~natbolon/14.png?share_key=N2aaqMGG2HXwmTSaYOq8vA" alt="a" style="max-width: 100%;width: 500px;"  width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-        <script data-plotly="natbolon:14" sharekey-plotly="N2aaqMGG2HXwmTSaYOq8vA" src="https://plot.ly/embed.js" async></script>
-  </div>
+      <!-- Most common words-->
+      <div class='row'>
+      <div class='col-xl-4 col-lg-6'>
+          <div class='row align-items-center no-gutters mb-4 mb-lg-5'>
+            <div class='inter-text text-center'>
+                <p class='text-black-50 mb-0' align='justify'>The results this time were more similar. In both cases, the presence of weakly subjective adjectives is higher than the stronger ones. Also, the usage of adjectives with positive connotation is preferred in front of neutral or negative ones. But the main point to highlight is that for both genders, the distribution is the same.</p>
+                
+            </div>
+          </div>
+      </div>
+        <div class='col-xl-8 col-lg-6'>
+          <div class="bk-root" id="df8cfcdc-54b6-420e-b5dc-0d185b821603" data-root-id="4493"></div>
 
-  </div> -->
+        </div>
+      </div> 
+        
+        <div class='col-xl-12 col-lg-12'>
+          <div>
+            <p class='inter-text text-black-50 mb-0 text-center' align='justify'>These results gave us some hope. 
+            Maybe we were not perceived and described that different and there was no bias to be found. But of course, things are not always what they seem to be at first sight! </p>
+          </div>
+        
+        </div>
+      
 
+      
+
+      <div class='row align-items-center no-gutters mb-4 mb-lg-5'>
+        <div class='inter-text text-center'>
+            
+            <p class='inter-text text-black-50 mb-0 text-center' align='justify'><strong>Linguistic bias</strong> is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s). This translates for us in a way that, if there exists such a bias, our model will be able to detect patterns in the given adjective and decided the gender of the person being described. If such a bias does not exist, the model will perceive them equally and therefore, won’t be able to make a prediction. </p>
+
+            
+          </div>
+      </div>
+    </div>
+
+
+
+
+      <!-- Overviews Examples - Venus W and Roger F -->
+      <div class='row justify-content-center no-gutters mb-5 mb-lg-0'>
+        <div class='col-lg-5 center'>
+          <div class='bg-grey text-center h-100 project'>
+            <div class='d-flex h-100'>
+              <div class='project-text w-100 my-auto text-center text-lg-left'>
+                <h4 class='text-white'>Venus Williams</h4>
+
+                <p class='mb-0 text-white-50' align='justify'>Venus Ebony Starr Williams (born June 17, 1980) is an American professional tennis player. A former world No. 1, Williams is generally credited with ushering in a new era of power on the women's professional tennis tour.</p>
+
+                <p class='mb-0 text-white-50' align='justify'>Williams has been ranked world No. 1 by the Women's Tennis Association on three occasions, for a total of 11 weeks. She first reached the No. 1 ranking on February 25, 2002, the first African American woman to do so in the Open Era, and the second all time since Althea Gibson. Williams' seven Grand Slam singles titles are tied for 12th on the all-time list, and 8th on the Open Era list, more than any other active female player except her sister. She has reached 16 Grand Slam finals, most recently at Wimbledon in 2017. She has also won 14 Grand Slam Women's doubles titles, all with Serena Williams; the pair is unbeaten in Grand Slam doubles finals. Williams also has two Mixed Doubles titles. Her five Wimbledon singles titles tie her with two other women for eighth place on the all-time list, but gives her sole possession of No. 4 on the Open Era List, trailing only the nine titles of Martina Navratilova and the seven of Serena Williams and Steffi Graf. From the 2000 Wimbledon Championships to the 2001 US Open, Williams won four of the six Grand Slam singles tournaments in that span. At the 2019 US Open, Williams extended her record as the all-time leader, male or female, in Grand Slams played, with 84.[9] With her run to the 2017 Wimbledon singles final, she broke the record for longest time between first and most recent grand slam singles finals appearances. Williams was twice the season prize money leader in 2001 and 2017.</p>
+
+                <p class='mb-0 text-white-50' align='justify'>Williams has won four Olympic gold medals, one in singles and three in women's doubles, along with a silver medal in mixed doubles, pulling even with Kathleen McKane Godfree for the most Olympic medals won by a male or female tennis player. She is the only tennis player to have won a medal at four Olympic Games. At the 2000 Sydney Olympics, Williams became only the second player to win Olympic gold medals in both singles and doubles at one Olympic Games, after Helen Wills Moody at the 1924 Summer Olympics.</p>
+
+                <p class='mb-0 text-white-50' align='justify'>With 49 singles titles, Williams trails only her sister Serena Williams among active players on the WTA Tour with most singles titles. Her 35-match winning streak from the 2000 Wimbledon Championships to the 2000 Generali Ladies Linz tournament final is the longest since January 1, 2000. She is also one of only three active WTA players to have reached the finals of all four Grand Slams, along with Serena Williams and Maria Sharapova.</p>
+                
+                <hr class='d-none d-lg-block mb-0 ml-0'>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-lg-5 center'>
+          <div class='bg-black text-center h-100 project'>
+            <div class='d-flex h-100'>
+              <div class='project-text w-100 my-auto text-center text-lg-left'>
+                <h4 class='text-white'>Roger Federer</h4>
+                <p class='mb-0 text-white-50' align='justify'>Roger Federer (born 8 August 1981) is a Swiss professional tennis player who is ranked world No. 3 in men's singles tennis by the Association of Tennis Professionals (ATP). He has won 20 Grand Slam singles titles—the most in history by a male player—and has held the world No. 1 spot in the ATP rankings for a record total of 310 weeks (including a record 237 consecutive weeks) and was the year-end No. 1 five times, including four consecutive. Federer, who turned professional in 1998, was continuously ranked in the top ten from October 2002 to November 2016.</p>
+
+                <p class='mb-0 text-white-50' align='justify'>Federer has won a record eight Wimbledon titles, six Australian Open titles, five US Open titles (all consecutive, a record), and one French Open title. He is one of eight men to have achieved a Career Grand Slam. Federer has reached a record 31 men's singles Grand Slam finals, including 10 consecutively from the 2005 Wimbledon Championships to the 2007 US Open. Federer has also won a record six ATP Finals titles, 28 ATP Tour Masters 1000 titles, and a record 24 ATP Tour 500 titles. Federer was a member of Switzerland's winning Davis Cup team in 2014. He is also the only player after Jimmy Connors to have won 100 or more career singles titles, as well as to amass 1,200 wins in the Open Era.</p>
+
+                <p class='mb-0 text-white-50' align='justify'>Federer's all-court game and versatile style of play involve exceptional footwork and shot-making. Effective both as a baseliner and a volleyer, his apparent effortlessness and efficient movement on the court have made Federer highly popular among tennis fans. He has received the tour Sportsmanship Award 13 times and been named the ATP Player of the Year and ITF World Champion five times. He has won the Laureus World Sportsman of the Year award a record five times, including four consecutive awards from 2005 to 2008. He is also the only person to have won the BBC Overseas Sports Personality of the Year award four times.</p>
+                <hr class='d-none d-lg-block mb-0 ml-0'>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-xl-12 col-lg-6' align='center'>
+          <div class='inter-text text-center text-center' >
+            <p class='text-black-50 mb-0' align='justify'>When we observe these two overviews, we cannot spot many difference in terms of the words used to describe them. In both cases, they are described as 'professional tennis player', it is an emphasis on their awards and performance along their careers and some insight about other personal details.</p>
+          </div>
+
+          <div class='inter-text text-center text-center'>
+            <h3>But, what if we took a deeper look?</h3>
+          </div>
+
+          <div class='inter-text text-center text-center'>
+            <p class='text-black-50 mb-0' align='justify'>In order to analyse if there exists a difference between the descriptions based on the gender, we have developed a model using machine learning techniques. This model receives as input a series of words appearing in the overview we want to analyse. Its output is the probability that the overview belongs to a woman.</p>
+            <p class='text-black-50 mb-0' align='justify'>The idea behind this model is that if both genders are equally described, the model won't be able to identify the corresponding gender. In case it is able to perform an assignment, it means there is something in the data that can be learnt in order to identifying the gender. In other words, it means there is a bias.</p>
+          </div>
+        
+        </div>
+      <!-- Project Two Row -->
+      <div class='row justify-content-center no-gutters'>
+        <div class='col-lg-5'>
+          <img class='img-fluid' src='img/demo-image-02.jpg' alt='>
+        </div>
+        <div class='col-lg-6 order-lg-first'>
+          <div class='bg-black text-center h-100 project'>
+            <div class='d-flex h-100'>
+              <div class='project-text w-100 my-auto text-center text-lg-right'>
+                <h4 class='text-white'>MODEL STUFF</h4>
+                <p class='mb-0 text-white-50'>HERE WE SHOULD PUT SOMETHING RELATED TO THE MODEL, THE WORDS SCORING HIGHER AND SO ON</p>
+                <hr class='d-none d-lg-block mb-0 mr-0'>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Linguistic bias explanation--> 
+      <div class='container'>
+          <div class='inter-text text-center' >
+            <p class='text-black-50 mb-0' align='justify'>Given the previous results, we can state there is a bias in the adjective usage based on gender.</p>
+            <p class='text-black-50 mb-0' align='justify'>Linguistic biases is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s).</p>
+          </div>
+        
+        </div>
+      
+
+    </div>
+  </section>
   
 
   <!-- Topic bias -->
-  <div w3-include-html="html/topic-bias.html"></div> 
+  <div w3-include-html='html/topic-bias.html'></div> 
 
   <!-- Occupation bias -->
-  <div w3-include-html="html/occupation-bias.html"></div> 
+  <div w3-include-html='html/occupation-bias.html'></div> 
 
   <!-- Team -->
-  <div w3-include-html="html/team.html"></div> 
+  <div w3-include-html='html/team.html'></div> 
 
   <!-- Contact Section -->
-  <div w3-include-html="html/contact.html"></div> 
+  <div w3-include-html='html/contact.html'></div> 
   
   <!-- Footer -->
-  <footer class="bg-black small text-center text-white-50">
-    <div class="container">
+  <footer class='bg-black small text-center text-white-50'>
+    <div class='container'>
       Copyright &copy; 🦄🦄🦄🦄 2019
     </div>
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src='vendor/jquery/jquery.min.js'></script>
+  <script src='vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src='vendor/jquery-easing/jquery.easing.min.js'></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/grayscale.min.js"></script>
+  <script src='js/grayscale.min.js'></script>
   <script>includeHTML();</script>
+
+  <script type="text/javascript">
+  (function() {
+    var fn = function() {
+      Bokeh.safely(function() {
+        (function(root) {
+          function embed_document(root) {
+            
+          var docs_json = '{"50ebc561-d707-4ee8-933c-885e67dc4b11":{"roots":{"references":[{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"4574","type":"Selection"},"selection_policy":{"id":"4573","type":"UnionRenderers"}},"id":"4540","type":"ColumnDataSource"},{"attributes":{"bottom":{"expr":{"id":"4520","type":"Stack"}},"fill_color":{"value":"#ffa720"},"line_color":{"value":"#ffa720"},"top":{"expr":{"id":"4521","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4542","type":"VBar"},{"attributes":{},"id":"4570","type":"Selection"},{"attributes":{"callback":null,"factors":["male","female"],"range_padding":0.1},"id":"4496","type":"FactorRange"},{"attributes":{},"id":"4569","type":"UnionRenderers"},{"attributes":{},"id":"4571","type":"UnionRenderers"},{"attributes":{},"id":"4572","type":"Selection"},{"attributes":{"bottom":{"expr":{"id":"4520","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"4521","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4543","type":"VBar"},{"attributes":{},"id":"4573","type":"UnionRenderers"},{"attributes":{},"id":"4500","type":"CategoricalScale"},{"attributes":{"callback":null,"start":0},"id":"4498","type":"DataRange1d"},{"attributes":{},"id":"4574","type":"Selection"},{"attributes":{"data_source":{"id":"4540","type":"ColumnDataSource"},"glyph":{"id":"4542","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"strongly subjective negative","nonselection_glyph":{"id":"4543","type":"VBar"},"selection_glyph":null,"view":{"id":"4545","type":"CDSView"}},"id":"4544","type":"GlyphRenderer"},{"attributes":{},"id":"4502","type":"LinearScale"},{"attributes":{"bottom":{"expr":{"id":"4522","type":"Stack"}},"fill_color":{"value":"#80b1d6"},"line_color":{"value":"#80b1d6"},"top":{"expr":{"id":"4523","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4548","type":"VBar"},{"attributes":{},"id":"4575","type":"UnionRenderers"},{"attributes":{"source":{"id":"4540","type":"ColumnDataSource"}},"id":"4545","type":"CDSView"},{"attributes":{"formatter":{"id":"4566","type":"CategoricalTickFormatter"},"minor_tick_line_color":{"value":null},"ticker":{"id":"4505","type":"CategoricalTicker"}},"id":"4504","type":"CategoricalAxis"},{"attributes":{},"id":"4576","type":"Selection"},{"attributes":{"bottom":{"expr":{"id":"4516","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"4517","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4531","type":"VBar"},{"attributes":{},"id":"4509","type":"BasicTicker"},{"attributes":{},"id":"4505","type":"CategoricalTicker"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"4576","type":"Selection"},"selection_policy":{"id":"4575","type":"UnionRenderers"}},"id":"4546","type":"ColumnDataSource"},{"attributes":{},"id":"4577","type":"UnionRenderers"},{"attributes":{"grid_line_color":null,"ticker":{"id":"4505","type":"CategoricalTicker"}},"id":"4507","type":"Grid"},{"attributes":{"bottom":{"expr":{"id":"4524","type":"Stack"}},"fill_color":{"value":"#aea7a3"},"line_color":{"value":"#aea7a3"},"top":{"expr":{"id":"4525","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4554","type":"VBar"},{"attributes":{},"id":"4578","type":"Selection"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"4513","type":"HoverTool"}]},"id":"4514","type":"Toolbar"},{"attributes":{"source":{"id":"4546","type":"ColumnDataSource"}},"id":"4551","type":"CDSView"},{"attributes":{"dimension":1,"ticker":{"id":"4509","type":"BasicTicker"}},"id":"4512","type":"Grid"},{"attributes":{},"id":"4579","type":"UnionRenderers"},{"attributes":{"formatter":{"id":"4568","type":"BasicTickFormatter"},"minor_tick_line_color":{"value":null},"ticker":{"id":"4509","type":"BasicTicker"}},"id":"4508","type":"LinearAxis"},{"attributes":{},"id":"4580","type":"Selection"},{"attributes":{"bottom":{"expr":{"id":"4522","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"4523","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4549","type":"VBar"},{"attributes":{"data_source":{"id":"4546","type":"ColumnDataSource"},"glyph":{"id":"4548","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"weakly subjective positive","nonselection_glyph":{"id":"4549","type":"VBar"},"selection_glyph":null,"view":{"id":"4551","type":"CDSView"}},"id":"4550","type":"GlyphRenderer"},{"attributes":{"bottom":{"expr":{"id":"4516","type":"Stack"}},"fill_color":{"value":"#1081d6"},"line_color":{"value":"#1081d6"},"top":{"expr":{"id":"4517","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4530","type":"VBar"},{"attributes":{"callback":null,"tooltips":"$name @genders: @$name"},"id":"4513","type":"HoverTool"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"4578","type":"Selection"},"selection_policy":{"id":"4577","type":"UnionRenderers"}},"id":"4552","type":"ColumnDataSource"},{"attributes":{},"id":"4568","type":"BasicTickFormatter"},{"attributes":{"source":{"id":"4558","type":"ColumnDataSource"}},"id":"4563","type":"CDSView"},{"attributes":{"source":{"id":"4552","type":"ColumnDataSource"}},"id":"4557","type":"CDSView"},{"attributes":{"fields":["strongly subjective positive"]},"id":"4517","type":"Stack"},{"attributes":{"fields":["strongly subjective positive"]},"id":"4518","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"4524","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"4525","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4555","type":"VBar"},{"attributes":{"data_source":{"id":"4552","type":"ColumnDataSource"},"glyph":{"id":"4554","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"weakly subjective neutral","nonselection_glyph":{"id":"4555","type":"VBar"},"selection_glyph":null,"view":{"id":"4557","type":"CDSView"}},"id":"4556","type":"GlyphRenderer"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral"]},"id":"4519","type":"Stack"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"4580","type":"Selection"},"selection_policy":{"id":"4579","type":"UnionRenderers"}},"id":"4558","type":"ColumnDataSource"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral"]},"id":"4520","type":"Stack"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative"]},"id":"4521","type":"Stack"},{"attributes":{"background_fill_alpha":{"value":0.1},"below":[{"id":"4504","type":"CategoricalAxis"}],"center":[{"id":"4507","type":"Grid"},{"id":"4512","type":"Grid"}],"left":[{"id":"4508","type":"LinearAxis"}],"outline_line_color":{"value":null},"plot_height":450,"renderers":[{"id":"4532","type":"GlyphRenderer"},{"id":"4538","type":"GlyphRenderer"},{"id":"4544","type":"GlyphRenderer"},{"id":"4550","type":"GlyphRenderer"},{"id":"4556","type":"GlyphRenderer"},{"id":"4562","type":"GlyphRenderer"}],"title":{"id":"4494","type":"Title"},"toolbar":{"id":"4514","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"4496","type":"FactorRange"},"x_scale":{"id":"4500","type":"CategoricalScale"},"y_range":{"id":"4498","type":"DataRange1d"},"y_scale":{"id":"4502","type":"LinearScale"}},"id":"4493","subtype":"Figure","type":"Plot"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"4570","type":"Selection"},"selection_policy":{"id":"4569","type":"UnionRenderers"}},"id":"4528","type":"ColumnDataSource"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative"]},"id":"4522","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"4526","type":"Stack"}},"fill_color":{"value":"#f2cb8e"},"line_color":{"value":"#f2cb8e"},"top":{"expr":{"id":"4527","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4560","type":"VBar"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive"]},"id":"4523","type":"Stack"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive","weakly subjective neutral"]},"id":"4525","type":"Stack"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive","weakly subjective neutral"]},"id":"4526","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"4518","type":"Stack"}},"fill_color":{"value":"#544E4B"},"line_color":{"value":"#544E4B"},"top":{"expr":{"id":"4519","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4536","type":"VBar"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive"]},"id":"4524","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"4526","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"4527","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4561","type":"VBar"},{"attributes":{"data_source":{"id":"4558","type":"ColumnDataSource"},"glyph":{"id":"4560","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"weakly subjective negative","nonselection_glyph":{"id":"4561","type":"VBar"},"selection_glyph":null,"view":{"id":"4563","type":"CDSView"}},"id":"4562","type":"GlyphRenderer"},{"attributes":{"bottom":{"expr":{"id":"4518","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"4519","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"4537","type":"VBar"},{"attributes":{"text":"% distribution along adjectives"},"id":"4494","type":"Title"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"4572","type":"Selection"},"selection_policy":{"id":"4571","type":"UnionRenderers"}},"id":"4534","type":"ColumnDataSource"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive","weakly subjective neutral","weakly subjective negative"]},"id":"4527","type":"Stack"},{"attributes":{"fields":[]},"id":"4516","type":"Stack"},{"attributes":{"data_source":{"id":"4528","type":"ColumnDataSource"},"glyph":{"id":"4530","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"strongly subjective positive","nonselection_glyph":{"id":"4531","type":"VBar"},"selection_glyph":null,"view":{"id":"4533","type":"CDSView"}},"id":"4532","type":"GlyphRenderer"},{"attributes":{"data_source":{"id":"4534","type":"ColumnDataSource"},"glyph":{"id":"4536","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"strongly subjective neutral","nonselection_glyph":{"id":"4537","type":"VBar"},"selection_glyph":null,"view":{"id":"4539","type":"CDSView"}},"id":"4538","type":"GlyphRenderer"},{"attributes":{},"id":"4566","type":"CategoricalTickFormatter"},{"attributes":{"source":{"id":"4528","type":"ColumnDataSource"}},"id":"4533","type":"CDSView"},{"attributes":{"source":{"id":"4534","type":"ColumnDataSource"}},"id":"4539","type":"CDSView"}],"root_ids":["4493"]},"title":"Bokeh Application","version":"1.3.4"}}';
+          var render_items = [{"docid":"50ebc561-d707-4ee8-933c-885e67dc4b11","roots":{"4493":"df8cfcdc-54b6-420e-b5dc-0d185b821603"}}];
+          root.Bokeh.embed.embed_items(docs_json, render_items);
+        
+          }
+          if (root.Bokeh !== undefined) {
+            embed_document(root);
+          } else {
+            var attempts = 0;
+            var timer = setInterval(function(root) {
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+                clearInterval(timer);
+              }
+              attempts++;
+              if (attempts > 100) {
+                console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                clearInterval(timer);
+              }
+            }, 10, root)
+          }
+        })(window);
+      });
+    };
+    if (document.readyState != "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  })();
+</script>
 
 </body>
 </html>
