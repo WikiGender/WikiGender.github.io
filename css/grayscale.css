@@ -300,12 +300,25 @@ a:focus, a:hover {
   background-color: #2E2E2E !important;
 }
 
+.bg-blue {
+  background-color: rgba(92,186,180, 0.5) !important;
+}
+
+.bg-light-grey {
+  background-color: rgba(169,195,194, 0.5) !important;
+}
+
 .bg-primary {
   background-color: #64a19d !important;
 }
 
 .text-primary {
   color: #64a19d !important;
+}
+
+.text-black {
+  color: #000000 !important;
+
 }
 
 footer {
