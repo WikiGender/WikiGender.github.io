@@ -57,6 +57,44 @@ function includeHTML() {
 };
 </script>
 
+<!-- Script for occupations plot-->
+<script type="text/javascript">
+  (function() {
+    var fn = function() {
+      Bokeh.safely(function() {
+        (function(root) {
+          function embed_document(root) {
+            
+          var docs_json = '{"a5a3ef94-732a-4a20-bffa-c3f74d77bed6":{"roots":{"references":[{"attributes":{"data_source":{"id":"10178","type":"ColumnDataSource"},"glyph":{"id":"10211","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"10212","type":"VBar"},"selection_glyph":null,"view":{"id":"10214","type":"CDSView"}},"id":"10213","type":"GlyphRenderer"},{"attributes":{"source":{"id":"10178","type":"ColumnDataSource"}},"id":"10214","type":"CDSView"},{"attributes":{"callback":null,"factors":["Model","Religion","Military","Education","Scientist","Social Sciences","Business &amp; Law","Politics","Artist","Sports"],"range_padding":0.1},"id":"10180","type":"FactorRange"},{"attributes":{},"id":"10224","type":"UnionRenderers"},{"attributes":{"formatter":{"id":"10219","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"minor_tick_line_color":{"value":null},"ticker":{"id":"10189","type":"CategoricalTicker"}},"id":"10188","type":"CategoricalAxis"},{"attributes":{},"id":"10186","type":"LinearScale"},{"attributes":{},"id":"10201","type":"ResetTool"},{"attributes":{"callback":null,"start":0},"id":"10182","type":"DataRange1d"},{"attributes":{},"id":"10189","type":"CategoricalTicker"},{"attributes":{},"id":"10200","type":"SaveTool"},{"attributes":{"grid_line_color":null,"ticker":{"id":"10189","type":"CategoricalTicker"}},"id":"10191","type":"Grid"},{"attributes":{"callback":null,"renderers":[{"id":"10213","type":"GlyphRenderer"}],"tooltips":[["number of biographies","@sum"]]},"id":"10215","type":"HoverTool"},{"attributes":{},"id":"10198","type":"WheelZoomTool"},{"attributes":{"text":""},"id":"10218","type":"Title"},{"attributes":{},"id":"10193","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"sum"},"width":{"value":0.9},"x":{"field":"field"}},"id":"10212","type":"VBar"},{"attributes":{},"id":"10184","type":"CategoricalScale"},{"attributes":{},"id":"10202","type":"HelpTool"},{"attributes":{},"id":"10197","type":"PanTool"},{"attributes":{"axis_label":"Number of biographies per occupations","formatter":{"id":"10221","type":"BasicTickFormatter"},"minor_tick_line_color":{"value":null},"ticker":{"id":"10193","type":"BasicTicker"}},"id":"10192","type":"LinearAxis"},{"attributes":{"background_fill_alpha":{"value":0.1},"below":[{"id":"10188","type":"CategoricalAxis"}],"border_fill_color":{"value":null},"center":[{"id":"10191","type":"Grid"},{"id":"10196","type":"Grid"}],"left":[{"id":"10192","type":"LinearAxis"}],"outline_line_color":{"value":null},"plot_height":450,"renderers":[{"id":"10213","type":"GlyphRenderer"}],"title":{"id":"10218","type":"Title"},"toolbar":{"id":"10203","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"10180","type":"FactorRange"},"x_scale":{"id":"10184","type":"CategoricalScale"},"y_range":{"id":"10182","type":"DataRange1d"},"y_scale":{"id":"10186","type":"LinearScale"}},"id":"10179","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"10221","type":"BasicTickFormatter"},{"attributes":{"callback":null,"data":{"female":[8804,382,554,6749,6811,14273,7591,23734,94761,35999],"field":["Model","Religion","Military","Education","Scientist","Social Sciences","Business &amp; Law","Politics","Artist","Sports"],"index":[4,6,3,2,7,8,1,5,0,9],"male":[2016,26407,34501,35815,63082,63207,75121,182148,256905,345506],"perc_fem":{"__ndarray__":"mpmZmZlZVEBmZmZmZmb2P5qZmZmZmfk/zczMzMzML0BmZmZmZmYjQGZmZmZmZjJAZmZmZmZmIkAAAAAAAAAnQGZmZmZm5jpAzczMzMzMIkA=","dtype":"float64","shape":[10]},"perc_male":{"__ndarray__":"mpmZmZmZMkBmZmZmZqZYQJqZmZmZmVhAZmZmZmYGVUAzMzMzM5NWQGZmZmZmZlRAMzMzMzOzVkAAAAAAACBWQGZmZmZmRlJAZmZmZmamVkA=","dtype":"float64","shape":[10]},"ratio":{"__ndarray__":"cT0K16NwzT+4HoXrUUhRQKRwPQrXI09APQrXo3A9FUCF61G4HoUiQLgehetRuBFAzczMzMzMI0CuR+F6FK4eQK5H4XoUrgVAMzMzMzMzI0A=","dtype":"float64","shape":[10]},"sum":[10820,26789,35055,42564,69893,77480,82712,205882,351666,381505],"sum_":[10820,26789,35055,42564,69893,77480,82712,205882,351666,381505]},"selected":{"id":"10225","type":"Selection"},"selection_policy":{"id":"10224","type":"UnionRenderers"}},"id":"10178","type":"ColumnDataSource"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"10197","type":"PanTool"},{"id":"10198","type":"WheelZoomTool"},{"id":"10199","type":"BoxZoomTool"},{"id":"10200","type":"SaveTool"},{"id":"10201","type":"ResetTool"},{"id":"10202","type":"HelpTool"},{"id":"10215","type":"HoverTool"}]},"id":"10203","type":"Toolbar"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"10223","type":"BoxAnnotation"},{"attributes":{},"id":"10219","type":"CategoricalTickFormatter"},{"attributes":{"fill_color":{"value":"#64a19d"},"line_color":{"value":"#64a19d"},"top":{"field":"sum"},"width":{"value":0.9},"x":{"field":"field"}},"id":"10211","type":"VBar"},{"attributes":{"dimension":1,"ticker":{"id":"10193","type":"BasicTicker"}},"id":"10196","type":"Grid"},{"attributes":{"overlay":{"id":"10223","type":"BoxAnnotation"}},"id":"10199","type":"BoxZoomTool"},{"attributes":{},"id":"10225","type":"Selection"}],"root_ids":["10179"]},"title":"Bokeh Application","version":"1.3.4"}}';
+          var render_items = [{"docid":"a5a3ef94-732a-4a20-bffa-c3f74d77bed6","roots":{"10179":"d5e3d644-9ab2-4102-bb98-66b57e2b92ad"}}];
+          root.Bokeh.embed.embed_items(docs_json, render_items);
+        
+          }
+          if (root.Bokeh !== undefined) {
+            embed_document(root);
+          } else {
+            var attempts = 0;
+            var timer = setInterval(function(root) {
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+                clearInterval(timer);
+              }
+              attempts++;
+              if (attempts > 100) {
+                console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                clearInterval(timer);
+              }
+            }, 10, root)
+          }
+        })(window);
+      });
+    };
+    if (document.readyState != "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  })();
+</script>
+
+<!-- Script for subjectivity and strength of adjectives--> 
 <script type="text/javascript">
   (function() {
     var fn = function() {
@@ -66,6 +104,43 @@ function includeHTML() {
             
           var docs_json = '{"3edb90c3-69e7-46ad-a763-adb5211003a7":{"roots":{"references":[{"attributes":{"label":{"value":"weakly subjective neutral"},"renderers":[{"id":"7237","type":"GlyphRenderer"}]},"id":"7250","type":"LegendItem"},{"attributes":{"fields":[]},"id":"7197","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"7203","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7204","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7230","type":"VBar"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative"]},"id":"7202","type":"Stack"},{"attributes":{"label":{"value":"strongly subjective negative"},"renderers":[{"id":"7225","type":"GlyphRenderer"}]},"id":"7248","type":"LegendItem"},{"attributes":{},"id":"7264","type":"UnionRenderers"},{"attributes":{"text":""},"id":"7252","type":"Title"},{"attributes":{"bottom":{"expr":{"id":"7207","type":"Stack"}},"fill_color":{"value":"#f2cb8e"},"line_color":{"value":"#f2cb8e"},"top":{"expr":{"id":"7208","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7241","type":"VBar"},{"attributes":{},"id":"7261","type":"Selection"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive","weakly subjective neutral","weakly subjective negative"]},"id":"7208","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"7207","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7208","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7242","type":"VBar"},{"attributes":{},"id":"7269","type":"Selection"},{"attributes":{"label":{"value":"weakly subjective negative"},"renderers":[{"id":"7243","type":"GlyphRenderer"}]},"id":"7251","type":"LegendItem"},{"attributes":{},"id":"7259","type":"Selection"},{"attributes":{"data_source":{"id":"7221","type":"ColumnDataSource"},"glyph":{"id":"7223","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"strongly subjective negative","nonselection_glyph":{"id":"7224","type":"VBar"},"selection_glyph":null,"view":{"id":"7226","type":"CDSView"}},"id":"7225","type":"GlyphRenderer"},{"attributes":{"bottom":{"expr":{"id":"7197","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7198","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7212","type":"VBar"},{"attributes":{},"id":"7263","type":"Selection"},{"attributes":{"callback":null,"start":0},"id":"7179","type":"DataRange1d"},{"attributes":{},"id":"7186","type":"CategoricalTicker"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"7261","type":"Selection"},"selection_policy":{"id":"7260","type":"UnionRenderers"}},"id":"7215","type":"ColumnDataSource"},{"attributes":{"axis_label":"% distribution along adjectives","formatter":{"id":"7257","type":"BasicTickFormatter"},"minor_tick_line_color":{"value":null},"ticker":{"id":"7190","type":"BasicTicker"}},"id":"7189","type":"LinearAxis"},{"attributes":{},"id":"7266","type":"UnionRenderers"},{"attributes":{},"id":"7257","type":"BasicTickFormatter"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive"]},"id":"7205","type":"Stack"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive"]},"id":"7204","type":"Stack"},{"attributes":{"data_source":{"id":"7215","type":"ColumnDataSource"},"glyph":{"id":"7217","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"strongly subjective neutral","nonselection_glyph":{"id":"7218","type":"VBar"},"selection_glyph":null,"view":{"id":"7220","type":"CDSView"}},"id":"7219","type":"GlyphRenderer"},{"attributes":{"source":{"id":"7221","type":"ColumnDataSource"}},"id":"7226","type":"CDSView"},{"attributes":{"source":{"id":"7239","type":"ColumnDataSource"}},"id":"7244","type":"CDSView"},{"attributes":{"label":{"value":"weakly subjective positive"},"renderers":[{"id":"7231","type":"GlyphRenderer"}]},"id":"7249","type":"LegendItem"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"7269","type":"Selection"},"selection_policy":{"id":"7268","type":"UnionRenderers"}},"id":"7239","type":"ColumnDataSource"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"7267","type":"Selection"},"selection_policy":{"id":"7266","type":"UnionRenderers"}},"id":"7233","type":"ColumnDataSource"},{"attributes":{"bottom":{"expr":{"id":"7197","type":"Stack"}},"fill_color":{"value":"#1081d6"},"line_color":{"value":"#1081d6"},"top":{"expr":{"id":"7198","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7211","type":"VBar"},{"attributes":{"bottom":{"expr":{"id":"7201","type":"Stack"}},"fill_color":{"value":"#ffa720"},"line_color":{"value":"#ffa720"},"top":{"expr":{"id":"7202","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7223","type":"VBar"},{"attributes":{"data_source":{"id":"7233","type":"ColumnDataSource"},"glyph":{"id":"7235","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"weakly subjective neutral","nonselection_glyph":{"id":"7236","type":"VBar"},"selection_glyph":null,"view":{"id":"7238","type":"CDSView"}},"id":"7237","type":"GlyphRenderer"},{"attributes":{"bottom":{"expr":{"id":"7203","type":"Stack"}},"fill_color":{"value":"#80b1d6"},"line_color":{"value":"#80b1d6"},"top":{"expr":{"id":"7204","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7229","type":"VBar"},{"attributes":{},"id":"7265","type":"Selection"},{"attributes":{"source":{"id":"7227","type":"ColumnDataSource"}},"id":"7232","type":"CDSView"},{"attributes":{"dimension":1,"ticker":{"id":"7190","type":"BasicTicker"}},"id":"7193","type":"Grid"},{"attributes":{},"id":"7268","type":"UnionRenderers"},{"attributes":{"items":[{"id":"7246","type":"LegendItem"},{"id":"7247","type":"LegendItem"},{"id":"7248","type":"LegendItem"},{"id":"7249","type":"LegendItem"},{"id":"7250","type":"LegendItem"},{"id":"7251","type":"LegendItem"}],"location":[0,30]},"id":"7245","type":"Legend"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"7194","type":"HoverTool"}]},"id":"7195","type":"Toolbar"},{"attributes":{"grid_line_color":null,"ticker":{"id":"7186","type":"CategoricalTicker"}},"id":"7188","type":"Grid"},{"attributes":{"label":{"value":"strongly subjective positive"},"renderers":[{"id":"7213","type":"GlyphRenderer"}]},"id":"7246","type":"LegendItem"},{"attributes":{},"id":"7181","type":"CategoricalScale"},{"attributes":{"bottom":{"expr":{"id":"7201","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7202","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7224","type":"VBar"},{"attributes":{"callback":null,"tooltips":"$name @genders: @$name"},"id":"7194","type":"HoverTool"},{"attributes":{"callback":null,"factors":["male","female"],"range_padding":0.1},"id":"7177","type":"FactorRange"},{"attributes":{"source":{"id":"7209","type":"ColumnDataSource"}},"id":"7214","type":"CDSView"},{"attributes":{},"id":"7260","type":"UnionRenderers"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral"]},"id":"7200","type":"Stack"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative"]},"id":"7203","type":"Stack"},{"attributes":{"source":{"id":"7215","type":"ColumnDataSource"}},"id":"7220","type":"CDSView"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive","weakly subjective neutral"]},"id":"7207","type":"Stack"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"7265","type":"Selection"},"selection_policy":{"id":"7264","type":"UnionRenderers"}},"id":"7227","type":"ColumnDataSource"},{"attributes":{},"id":"7262","type":"UnionRenderers"},{"attributes":{},"id":"7267","type":"Selection"},{"attributes":{"fields":["strongly subjective positive"]},"id":"7199","type":"Stack"},{"attributes":{},"id":"7255","type":"CategoricalTickFormatter"},{"attributes":{"bottom":{"expr":{"id":"7205","type":"Stack"}},"fill_color":{"value":"#aea7a3"},"line_color":{"value":"#aea7a3"},"top":{"expr":{"id":"7206","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7235","type":"VBar"},{"attributes":{"formatter":{"id":"7255","type":"CategoricalTickFormatter"},"minor_tick_line_color":{"value":null},"ticker":{"id":"7186","type":"CategoricalTicker"}},"id":"7185","type":"CategoricalAxis"},{"attributes":{"label":{"value":"strongly subjective neutral"},"renderers":[{"id":"7219","type":"GlyphRenderer"}]},"id":"7247","type":"LegendItem"},{"attributes":{"bottom":{"expr":{"id":"7205","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7206","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7236","type":"VBar"},{"attributes":{},"id":"7258","type":"UnionRenderers"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral","strongly subjective negative","weakly subjective positive","weakly subjective neutral"]},"id":"7206","type":"Stack"},{"attributes":{"data_source":{"id":"7209","type":"ColumnDataSource"},"glyph":{"id":"7211","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"strongly subjective positive","nonselection_glyph":{"id":"7212","type":"VBar"},"selection_glyph":null,"view":{"id":"7214","type":"CDSView"}},"id":"7213","type":"GlyphRenderer"},{"attributes":{"background_fill_alpha":{"value":0.1},"below":[{"id":"7185","type":"CategoricalAxis"}],"border_fill_color":{"value":null},"center":[{"id":"7188","type":"Grid"},{"id":"7193","type":"Grid"}],"left":[{"id":"7189","type":"LinearAxis"}],"outline_line_color":{"value":null},"plot_height":450,"renderers":[{"id":"7213","type":"GlyphRenderer"},{"id":"7219","type":"GlyphRenderer"},{"id":"7225","type":"GlyphRenderer"},{"id":"7231","type":"GlyphRenderer"},{"id":"7237","type":"GlyphRenderer"},{"id":"7243","type":"GlyphRenderer"}],"right":[{"id":"7245","type":"Legend"}],"title":{"id":"7252","type":"Title"},"toolbar":{"id":"7195","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"7177","type":"FactorRange"},"x_scale":{"id":"7181","type":"CategoricalScale"},"y_range":{"id":"7179","type":"DataRange1d"},"y_scale":{"id":"7183","type":"LinearScale"}},"id":"7176","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"7190","type":"BasicTicker"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"7263","type":"Selection"},"selection_policy":{"id":"7262","type":"UnionRenderers"}},"id":"7221","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"7227","type":"ColumnDataSource"},"glyph":{"id":"7229","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"weakly subjective positive","nonselection_glyph":{"id":"7230","type":"VBar"},"selection_glyph":null,"view":{"id":"7232","type":"CDSView"}},"id":"7231","type":"GlyphRenderer"},{"attributes":{"bottom":{"expr":{"id":"7199","type":"Stack"}},"fill_color":{"value":"#544E4B"},"line_color":{"value":"#544E4B"},"top":{"expr":{"id":"7200","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7217","type":"VBar"},{"attributes":{"fields":["strongly subjective positive","strongly subjective neutral"]},"id":"7201","type":"Stack"},{"attributes":{"source":{"id":"7233","type":"ColumnDataSource"}},"id":"7238","type":"CDSView"},{"attributes":{"bottom":{"expr":{"id":"7199","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7200","type":"Stack"}},"width":{"value":0.9},"x":{"field":"genders"}},"id":"7218","type":"VBar"},{"attributes":{"data_source":{"id":"7239","type":"ColumnDataSource"},"glyph":{"id":"7241","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"weakly subjective negative","nonselection_glyph":{"id":"7242","type":"VBar"},"selection_glyph":null,"view":{"id":"7244","type":"CDSView"}},"id":"7243","type":"GlyphRenderer"},{"attributes":{"callback":null,"data":{"genders":["male","female"],"strongly subjective negative":[8.639886553687978,9.072809184711524],"strongly subjective neutral":[0.8730734874177188,1.0085743351257084],"strongly subjective positive":[21.915910794555185,21.682410502349466],"weakly subjective negative":[11.767097020090578,10.714527927142372],"weakly subjective neutral":[14.181718613595473,14.698444993460253],"weakly subjective positive":[42.62231353065307,42.82323305721068]},"selected":{"id":"7259","type":"Selection"},"selection_policy":{"id":"7258","type":"UnionRenderers"}},"id":"7209","type":"ColumnDataSource"},{"attributes":{},"id":"7183","type":"LinearScale"},{"attributes":{"fields":["strongly subjective positive"]},"id":"7198","type":"Stack"}],"root_ids":["7176"]},"title":"Bokeh Application","version":"1.3.4"}}';
           var render_items = [{"docid":"3edb90c3-69e7-46ad-a763-adb5211003a7","roots":{"7176":"d0806b0b-b2d0-47dd-a88f-f9f5c8a9f7ff"}}];
+          root.Bokeh.embed.embed_items(docs_json, render_items);
+        
+          }
+          if (root.Bokeh !== undefined) {
+            embed_document(root);
+          } else {
+            var attempts = 0;
+            var timer = setInterval(function(root) {
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+                clearInterval(timer);
+              }
+              attempts++;
+              if (attempts > 100) {
+                console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                clearInterval(timer);
+              }
+            }, 10, root)
+          }
+        })(window);
+      });
+    };
+    if (document.readyState != "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  })();
+</script>
+
+<!-- Script for ratio of genders per occupation --> 
+<script type="text/javascript">
+  (function() {
+    var fn = function() {
+      Bokeh.safely(function() {
+        (function(root) {
+          function embed_document(root) {
+            
+          var docs_json = '{"f8874c35-7f8a-4d44-9639-8c7705b866af":{"roots":{"references":[{"attributes":{},"id":"10542","type":"CategoricalScale"},{"attributes":{"text":""},"id":"10594","type":"Title"},{"attributes":{"overlay":{"id":"10599","type":"BoxAnnotation"}},"id":"10557","type":"BoxZoomTool"},{"attributes":{},"id":"10559","type":"ResetTool"},{"attributes":{"label":{"value":"Female"},"renderers":[{"id":"10575","type":"GlyphRenderer"}]},"id":"10590","type":"LegendItem"},{"attributes":{"fields":[]},"id":"10568","type":"Stack"},{"attributes":{},"id":"10603","type":"Selection"},{"attributes":{"data_source":{"id":"10536","type":"ColumnDataSource"},"glyph":{"id":"10578","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"perc_male","nonselection_glyph":{"id":"10579","type":"VBar"},"selection_glyph":null,"view":{"id":"10581","type":"CDSView"}},"id":"10580","type":"GlyphRenderer"},{"attributes":{},"id":"10555","type":"PanTool"},{"attributes":{"callback":null,"data":{"female":[382,554,7591,35999,6811,23734,6749,14273,94761,8804],"field":["Religion","Military","Business &amp; Law","Sports","Scientist","Politics","Education","Social Sciences","Artist","Model"],"index":[6,3,1,9,7,5,2,8,0,4],"male":[26407,34501,75121,345506,63082,182148,35815,63207,256905,2016],"perc_fem":{"__ndarray__":"ZmZmZmZm9j+amZmZmZn5P2ZmZmZmZiJAzczMzMzMIkBmZmZmZmYjQAAAAAAAACdAzczMzMzML0BmZmZmZmYyQGZmZmZm5jpAmpmZmZlZVEA=","dtype":"float64","shape":[10]},"perc_male":{"__ndarray__":"ZmZmZmamWECamZmZmZlYQDMzMzMzs1ZAZmZmZmamVkAzMzMzM5NWQAAAAAAAIFZAZmZmZmYGVUBmZmZmZmZUQGZmZmZmRlJAmpmZmZmZMkA=","dtype":"float64","shape":[10]},"ratio":{"__ndarray__":"uB6F61FIUUCkcD0K1yNPQM3MzMzMzCNAMzMzMzMzI0CF61G4HoUiQK5H4XoUrh5APQrXo3A9FUC4HoXrUbgRQK5H4XoUrgVAcT0K16NwzT8=","dtype":"float64","shape":[10]},"sum":[26789,35055,82712,381505,69893,205882,42564,77480,351666,10820],"sum_":[26789,35055,82712,381505,69893,205882,42564,77480,351666,10820]},"selected":{"id":"10601","type":"Selection"},"selection_policy":{"id":"10600","type":"UnionRenderers"}},"id":"10536","type":"ColumnDataSource"},{"attributes":{},"id":"10595","type":"CategoricalTickFormatter"},{"attributes":{},"id":"10602","type":"UnionRenderers"},{"attributes":{},"id":"10560","type":"HelpTool"},{"attributes":{},"id":"10597","type":"BasicTickFormatter"},{"attributes":{"data_source":{"id":"10536","type":"ColumnDataSource"},"glyph":{"id":"10573","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"perc_fem","nonselection_glyph":{"id":"10574","type":"VBar"},"selection_glyph":null,"view":{"id":"10576","type":"CDSView"}},"id":"10575","type":"GlyphRenderer"},{"attributes":{},"id":"10601","type":"Selection"},{"attributes":{"items":[{"id":"10590","type":"LegendItem"},{"id":"10591","type":"LegendItem"},{"id":"10592","type":"LegendItem"}]},"id":"10589","type":"Legend"},{"attributes":{"axis_label":"% distribution of genders along occupations","formatter":{"id":"10597","type":"BasicTickFormatter"},"minor_tick_line_color":{"value":null},"ticker":{"id":"10551","type":"BasicTicker"}},"id":"10550","type":"LinearAxis"},{"attributes":{"dimension":1,"ticker":{"id":"10551","type":"BasicTicker"}},"id":"10554","type":"Grid"},{"attributes":{"label":{"value":"50%"},"renderers":[{"id":"10585","type":"GlyphRenderer"}]},"id":"10592","type":"LegendItem"},{"attributes":{"line_alpha":0.7,"line_color":"#DD4124","line_dash":[6],"line_width":4,"x":{"field":"x"},"y":{"value":50}},"id":"10583","type":"Line"},{"attributes":{"fields":["perc_fem","perc_male"]},"id":"10571","type":"Stack"},{"attributes":{},"id":"10547","type":"CategoricalTicker"},{"attributes":{},"id":"10558","type":"SaveTool"},{"attributes":{"bottom":{"expr":{"id":"10568","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"10569","type":"Stack"}},"width":{"value":0.9},"x":{"field":"field"}},"id":"10574","type":"VBar"},{"attributes":{"callback":null,"data":{"x":["Religion","Military","Business &amp; Law","Sports","Scientist","Politics","Education","Social Sciences","Artist","Model"]},"selected":{"id":"10603","type":"Selection"},"selection_policy":{"id":"10602","type":"UnionRenderers"}},"id":"10582","type":"ColumnDataSource"},{"attributes":{"bottom":{"expr":{"id":"10570","type":"Stack"}},"fill_color":{"value":"#D9CAB3"},"line_color":{"value":"#D9CAB3"},"top":{"expr":{"id":"10571","type":"Stack"}},"width":{"value":0.9},"x":{"field":"field"}},"id":"10578","type":"VBar"},{"attributes":{},"id":"10544","type":"LinearScale"},{"attributes":{"source":{"id":"10536","type":"ColumnDataSource"}},"id":"10576","type":"CDSView"},{"attributes":{"source":{"id":"10536","type":"ColumnDataSource"}},"id":"10581","type":"CDSView"},{"attributes":{"source":{"id":"10582","type":"ColumnDataSource"}},"id":"10586","type":"CDSView"},{"attributes":{"callback":null,"start":0},"id":"10540","type":"DataRange1d"},{"attributes":{},"id":"10556","type":"WheelZoomTool"},{"attributes":{"grid_line_color":null,"ticker":{"id":"10547","type":"CategoricalTicker"}},"id":"10549","type":"Grid"},{"attributes":{"callback":null,"renderers":[{"id":"10575","type":"GlyphRenderer"},{"id":"10580","type":"GlyphRenderer"}],"tooltips":[["percentage","@$name %"]]},"id":"10587","type":"HoverTool"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_dash":[6],"line_width":4,"x":{"field":"x"},"y":{"value":50}},"id":"10584","type":"Line"},{"attributes":{},"id":"10600","type":"UnionRenderers"},{"attributes":{"fields":["perc_fem"]},"id":"10569","type":"Stack"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"10555","type":"PanTool"},{"id":"10556","type":"WheelZoomTool"},{"id":"10557","type":"BoxZoomTool"},{"id":"10558","type":"SaveTool"},{"id":"10559","type":"ResetTool"},{"id":"10560","type":"HelpTool"},{"id":"10587","type":"HoverTool"}]},"id":"10561","type":"Toolbar"},{"attributes":{"bottom":{"expr":{"id":"10570","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"10571","type":"Stack"}},"width":{"value":0.9},"x":{"field":"field"}},"id":"10579","type":"VBar"},{"attributes":{"label":{"value":"Male"},"renderers":[{"id":"10580","type":"GlyphRenderer"}]},"id":"10591","type":"LegendItem"},{"attributes":{"formatter":{"id":"10595","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"minor_tick_line_color":{"value":null},"ticker":{"id":"10547","type":"CategoricalTicker"}},"id":"10546","type":"CategoricalAxis"},{"attributes":{"background_fill_alpha":{"value":0.1},"below":[{"id":"10546","type":"CategoricalAxis"}],"border_fill_color":{"value":null},"center":[{"id":"10549","type":"Grid"},{"id":"10554","type":"Grid"}],"left":[{"id":"10550","type":"LinearAxis"}],"outline_line_color":{"value":null},"plot_height":450,"renderers":[{"id":"10575","type":"GlyphRenderer"},{"id":"10580","type":"GlyphRenderer"},{"id":"10585","type":"GlyphRenderer"}],"right":[{"id":"10589","type":"Legend"}],"title":{"id":"10594","type":"Title"},"toolbar":{"id":"10561","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"10538","type":"FactorRange"},"x_scale":{"id":"10542","type":"CategoricalScale"},"y_range":{"id":"10540","type":"DataRange1d"},"y_scale":{"id":"10544","type":"LinearScale"}},"id":"10537","subtype":"Figure","type":"Plot"},{"attributes":{"callback":null,"factors":["Religion","Military","Business &amp; Law","Sports","Scientist","Politics","Education","Social Sciences","Artist","Model"],"range_padding":0.1},"id":"10538","type":"FactorRange"},{"attributes":{"fields":["perc_fem"]},"id":"10570","type":"Stack"},{"attributes":{"data_source":{"id":"10582","type":"ColumnDataSource"},"glyph":{"id":"10583","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"10584","type":"Line"},"selection_glyph":null,"view":{"id":"10586","type":"CDSView"}},"id":"10585","type":"GlyphRenderer"},{"attributes":{},"id":"10551","type":"BasicTicker"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"10599","type":"BoxAnnotation"},{"attributes":{"bottom":{"expr":{"id":"10568","type":"Stack"}},"fill_color":{"value":"#90323D"},"line_color":{"value":"#90323D"},"top":{"expr":{"id":"10569","type":"Stack"}},"width":{"value":0.9},"x":{"field":"field"}},"id":"10573","type":"VBar"}],"root_ids":["10537"]},"title":"Bokeh Application","version":"1.3.4"}}';
+          var render_items = [{"docid":"f8874c35-7f8a-4d44-9639-8c7705b866af","roots":{"10537":"0fd1636e-ec0e-4fd1-8224-cc83afda9d38"}}];
           root.Bokeh.embed.embed_items(docs_json, render_items);
         
           }
@@ -153,7 +228,119 @@ function includeHTML() {
   </section>
 
   <!-- Project introduction -->
-  <div w3-include-html='html/section_intro.html'></div>
+  <section id="introduction" class="projects-section bg-light">
+    
+    <div class="container">
+
+      <!-- Fact-check -->
+      <div class='inter-text text-black-50 mb-0 text-center'>
+        <p></p>
+        <h1>Wikipedia Fact-check </h1>
+      </div>
+
+      <div class="row align-items-center no-gutters mb-4 mb-lg-2">
+        <div>
+          <p class="inter-text-without-padding text-black-50 mb-0" align="justify"> First things first, let us start with a quick fact-check about Wikipedia’s biographies.
+            On average, men's biographies have a longer overview section than women's overviews, 10% longer to be exact.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Comment about distribution -->
+      <div>
+        <p class="inter-text-without-padding text-black-50 mb-0" align="justify"> One thing you may think at this point is, "okey but not everyone appears in Wikipedia". This is actually true. Although it is possible to create your own Wikipedia page, most biographies belong to people recognized in their field. So one detail we decided to explore further was the occupation of the different personalities. </p>
+        <p class="inter-text-without-padding text-black-50 mb-0 mb-lg-4" align="justify"> There is a huge variety of occupations, ranging from very general descriptions like “writer” or “athlete” to more detailed ones such as “midfielder” for footballers or “songwriter”. In order to obtain some informative results, we grouped the different occupations into 10  fields.</p>
+      </div>
+
+      
+
+
+      <!-- Occupation distribution--> 
+
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+            <div class="bk-root" id="d5e3d644-9ab2-4102-bb98-66b57e2b92ad" data-root-id="10179"></div>
+        </div>
+        <div class='col-lg-1'> </div>
+        <div class="col-lg-4">
+            <div class="d-flex h-100">
+              <div class="featured-text-left w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black">Field of Occupation distribution in Wikipedia biographies</h4>
+            <p class="mb-0 text-black-50" align="justify"> The field most represented among the different biographies is Sports followed by Artists and Politics. The following question came up straight forward: what’s the ratio of man:woman along with the different occupations?</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Gender by occupation -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-5">
+            <div class="d-flex h-100">
+              <div class="featured-text-right w-100 my-auto text-center text-lg-right">
+                <h4 class="text-black">Field of Occupation by Gender in Wikipedia biographies</h4>
+            <p class="mb-0 text-black-50" align="justify"> In almost all the 10 fields, mean represent a majority, more than 2 men per every woman. The only exception was the Modeling industry, in which women predominate. </p>
+              </div>
+            </div>
+          
+        </div>
+        <div class="col-lg-6">
+            <div class="bk-root" id="0fd1636e-ec0e-4fd1-8224-cc83afda9d38" data-root-id="10537"></div>
+        </div>
+      </div>
+        
+
+      <!-- comments ratio gender --> 
+      <div class="inter-text text-black-50 mb-0 text-center">
+        <h4> Interesting Facts about occupations in Wikipedia:</h4>
+      </div>
+      <div class="row">
+      <div class="col-lg-4">
+          <div class="bg-light-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black">Model</h4>
+                  <p class="mb-0 text-black-50" align="justify">Only one field of occupation has a higher female presence than males: models. This field represents those occupations related to the mode industry, mainly being models. </p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="bg-light-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black">Military and Religion</h4>
+                <p class="mb-0 text-black-50" align="justify">The fields with higher disparity are Military and Religion, two fields of occupation where powerful positions have been historically reserved to men. If you think about it, this result may be deceiving but not surprising at all. Let’s do the test: in five seconds, how many military names can you come up with?[...] How many of them are women? [...] Well, here is your answer.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="bg-light-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black">Artist</h4>
+                <p class="mb-0 text-black-50" align="justify">Among the most represented fields, Artist is the one with more parity with a ratio of 2.7 men for each woman represented.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div>
+      <p class="inter-text text-black-50 mb-0" align="justify">  So far, we have seen that Wikipedia is different in terms of numbers for men and women, but is this platform different in terms of content as well? If it does, can we find a statistical way of measuring such a difference? The answer is yes! you just need to continue reading :)</p>
+
+      <p class="inter-text text-black-50 mb-0 text-center" align="justify"> Our linguistic tour starts here!</p>
+    </div>
+
+    </div>
+
+  </section>
 
   <!--Linguistic bias -->
   <section id='linguistic-bias' class='projects-section bg-light'>
@@ -166,13 +353,13 @@ function includeHTML() {
 
       <!-- Intro Linguistic Bias -->
       <div>
-        <p class='inter-text text-black-50 mb-0 text-center mb-lg-3' align='justify'>According to Wikipedia, linguistics is the scientific study of language. It involves analyzing language form and its meaning in context[1]. The previous is really important as we would like to understand the linguistics people use to portrait mean and women.
+        <p class='inter-text text-black-50 mb-0 mb-lg-3' align='justify'>According to Wikipedia, linguistics is the scientific study of language. It involves analyzing language form and its meaning in context[1]. The previous is really important as we would like to understand the linguistics people use to portrait mean and women.
         </p>
 
-        <p class='inter-text text-black-50 mb-0 text-center' align='justify'>We began by studying the adjectives used in the overviews. Why not all the words? 
+        <p class='inter-text text-black-50 mb-0' align='justify'>We began by studying the adjectives used in the overviews. Why not all the words? 
         Adjectives are subject to higher subjectivity. It is not the same to say “he is a good actor” than “he is not a bad actor”. In other words, they allow the introduction of some more subjective perspective in what should be a completely objective description. 
         </p>
-        <p class='inter-text text-black-50 mb-0 text-center' align='justify'>First, we extracted the different adjectives from the biographies and ranked them based on their subjectivity and strength. </p>
+        <p class='inter-text text-black-50 mb-0' align='justify'>First, we extracted the different adjectives from the biographies and ranked them based on their subjectivity and strength. </p>
       </div>
 
 
@@ -180,7 +367,7 @@ function includeHTML() {
       <div class='row'>
       <div class='col-xl-4 col-lg-6'>
           <div class='row align-items-center no-gutters mb-4 mb-lg-5'>
-            <div class='inter-text text-center'>
+            <div class='inter-text'>
                 <p class='text-black-50 mb-0' align='justify'>The results this time were more similar. In both cases, the presence of weakly subjective adjectives is higher than the stronger ones. Also, the usage of adjectives with positive connotation is preferred in front of neutral or negative ones. But the main point to highlight is that for both genders, the distribution is the same.</p>
                 
             </div>
@@ -194,7 +381,7 @@ function includeHTML() {
         
         <div class='col-xl-12 col-lg-12'>
           <div>
-            <p class='inter-text text-black-50 mb-0 text-center' align='justify'>These results gave us some hope. 
+            <p class='inter-text text-black-50 mb-0' align='justify'>These results gave us some hope. 
             Maybe we were not perceived and described that different and there was no bias to be found. But of course, things are not always what they seem to be at first sight! </p>
           </div>
         
@@ -204,9 +391,9 @@ function includeHTML() {
       
 
       <div class='row align-items-center no-gutters mb-4 mb-lg-5'>
-        <div class='inter-text text-center'>
+        <div class='inter-text'>
             
-            <p class='inter-text text-black-50 mb-0 text-center' align='justify'><strong>Linguistic bias</strong> is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s). This translates for us in a way that, if there exists such a bias, our model will be able to detect patterns in the given adjective and decided the gender of the person being described. If such a bias does not exist, the model will perceive them equally and therefore, won’t be able to make a prediction. </p>
+            <p class='inter-text text-black-50 mb-0' align='justify'><strong>Linguistic bias</strong> is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s). This translates for us in a way that, if there exists such a bias, our model will be able to detect patterns in the given adjective and decided the gender of the person being described. If such a bias does not exist, the model will perceive them equally and therefore, won’t be able to make a prediction. </p>
 
             
           </div>

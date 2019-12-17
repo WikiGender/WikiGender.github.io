@@ -202,6 +202,10 @@
   font-size: 120%;
 }
 
+.projects-section .inter-text-without-padding {
+  padding: 1rem;
+  font-size: 120%;
+}
 
 @media (min-width: 992px) {
   .projects-section .project-text {
