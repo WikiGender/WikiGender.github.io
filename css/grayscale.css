@@ -4,6 +4,16 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
+ /*!
+ Colors palette:
+
+ main blue-green: 64A19D;
+ dark red:90323d;
+ sand: D9CAB3;
+ military green: ADBCA5
+ pale brown: E8B9AB
+ */
+
 #mainNav {
   min-height: 56px;
   background-color: #fff;
@@ -99,7 +109,7 @@
 
 .masthead h1 {
   font-family: 'Varela Round';
-  font-size: 2.5rem;
+  font-size: 6.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background-color: rgba(255, 255, 255, 1);
@@ -201,6 +211,24 @@
   padding: 2rem;
   font-size: 120%;
 }
+
+
+.projects-section .highlight-main{
+  color: #64A19D;
+  font-weight: bold;
+}
+
+.projects-section .highlight-red{
+  color: #90323d;
+  font-weight: bold;
+}
+
+.projects-section .highlight-brown{
+  color: #D9CAB3;
+  font-weight: bold;
+}
+
+
 
 .projects-section .inter-text-without-padding {
   padding: 1rem;
@@ -311,6 +339,15 @@ a:focus, a:hover {
 .bg-light-grey {
   background-color: rgba(169,195,194, 0.5) !important;
 }
+
+.bg-light-sand {
+  background-color: rgba(217,202,179, 0.5) !important;
+}
+
+.bg-light-military-green {
+  background-color: rgba(173,188,165, 0.5) !important;
+}
+
 
 .bg-primary {
   background-color: #64a19d !important;
