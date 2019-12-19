@@ -22,143 +22,86 @@
 </head>
 
 <body id="page-top">
-  <section id="linguistic-bias" class="projects-section bg-light">
+
+  <!-- Topic bias -->
+  <section id="noun-bias" class="projects-section bg-light">
     <div class="container">
 
-      <div class="inter-text text-black-50 mb-0 text-center">
-        <p></p>
-        <h1>Linguistic Bias. </h1>
+      <div class='inter-text text-black-50 mb-0 text-center'>
+        <h1>Are women indeed realted to family and men to their careers?</h1>
       </div>
 
-      <div>
-        <p class="inter-text text-black-50 mb-0 text-center" align="justify">We began by studying the adjectives used in the overviews. Why not all the words? 
-        Adjectives are subject to higher subjectivity. It is not the same to say “he is a good actor” than “he is not a bad actor”. In other words, they allow the introduction of some more subjective perspective in what should be a completely objective description. 
+       <p class='inter-text text-black-50 mb-0' align='justify'>We extend the analysis by including nouns, increasing the total number of words explored. By adding the nouns, we can explore the bias also in terms of topics. 
+        Using the same model as we mentioned before, the accuracy score achieved in this case is much higher. It means that the differences in that case are not that subtle and start to be easier to detect. 
+        The result shows us those words that are more predictive for the two different genders. In this case … explain the words that the model output. 
+        If we associate these words to topics, we see that women are actually related to X, X, X while men are more related to Y, Y, Y. 
         </p>
-        <p class="inter-text text-black-50 mb-0 text-center" align="justify">First, we extracted the different adjectives from the biographies and ranked them based on their subjectivity and strength. </p>
-      </div>
+
+      
 
 
-      <!-- Most common words-->
-      <div class="row">
-      <div class="col-xl-4 col-lg-6">
-          <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            <div class="inter-text text-center">
-                <p class="text-black-50 mb-0" align="justify">The results this time were more similar. In both cases, the presence of weakly subjective adjectives is higher than the stronger ones. Also, the usage of adjectives with positive connotation is preferred in front of neutral or negative ones. But the main point to highlight is that for both genders, the distribution is the same.</p>
-                
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-5">
+          <div class="bg-light-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black" style="font-size: 1.6rem">How does the model really work? </h4>
+                  <p class="mb-0 text-black" align="justify" style="font-size: 1.1rem"> We use a logistic regression model that takes as input a bag of words and outputs the probability that the encoded overview belongs to a woman. The encoding is done as a bag of words, it means a binary vector that signals if a word is present in the text or not. The vocabulary is build with the set of 100 most common words for men and the top 100 for women.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
             </div>
           </div>
       </div>
-        <div class="col-xl-8 col-lg-6">
-          <iframe width="600" height="400" frameborder="0" scrolling="no" src="//plot.ly/~natbolon/14.embed"></iframe>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-5">
+        <div>
+            <div class="bg-grey text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white" style="font-size: 1.6rem">How did the model perform?</h4>
+                    <p class="mb-0 text-white" align="justify" style="font-size: 1.1rem">54.7% of the observations were correctly predicted, confirming that the bias does exist. </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
+                </div>
+              </div>
+            </div>
         </div>
-      </div> 
-        
-        <div class="col-xl-12 col-lg-12">
-          <div>
-            <p class="inter-text text-black-50 mb-0 text-center" align="justify">These results gave us some hope. 
-            Maybe we were not perceived and described that different and there was no bias to be found. But of course, things are not always what they seem to be at first sight! </p>
-          </div>
-        
-        </div>
-      
-
-      
-
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <div class="inter-text text-center">
-            
-            <p class="inter-text text-black-50 mb-0 text-center" align="justify"><strong>Linguistic bias</strong> is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s). This translates for us in a way that, if there exists such a bias, our model will be able to detect patterns in the given adjective and decided the gender of the person being described. If such a bias does not exist, the model will perceive them equally and therefore, won’t be able to make a prediction. </p>
-
-            
-          </div>
-      </div>
-    </div>
-
-
-
-
-      <!-- Overviews Examples - Venus W and Roger F -->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-5 center">
+        <div>
           <div class="bg-grey text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Venus Williams</h4>
-
-                <p class="mb-0 text-white-50" align="justify">Venus Ebony Starr Williams (born June 17, 1980) is an American professional tennis player. A former world No. 1, Williams is generally credited with ushering in a new era of power on the women's professional tennis tour.</p>
-
-                <p class="mb-0 text-white-50" align="justify">Williams has been ranked world No. 1 by the Women's Tennis Association on three occasions, for a total of 11 weeks. She first reached the No. 1 ranking on February 25, 2002, the first African American woman to do so in the Open Era, and the second all time since Althea Gibson. Williams' seven Grand Slam singles titles are tied for 12th on the all-time list, and 8th on the Open Era list, more than any other active female player except her sister. She has reached 16 Grand Slam finals, most recently at Wimbledon in 2017. She has also won 14 Grand Slam Women's doubles titles, all with Serena Williams; the pair is unbeaten in Grand Slam doubles finals. Williams also has two Mixed Doubles titles. Her five Wimbledon singles titles tie her with two other women for eighth place on the all-time list, but gives her sole possession of No. 4 on the Open Era List, trailing only the nine titles of Martina Navratilova and the seven of Serena Williams and Steffi Graf. From the 2000 Wimbledon Championships to the 2001 US Open, Williams won four of the six Grand Slam singles tournaments in that span. At the 2019 US Open, Williams extended her record as the all-time leader, male or female, in Grand Slams played, with 84.[9] With her run to the 2017 Wimbledon singles final, she broke the record for longest time between first and most recent grand slam singles finals appearances. Williams was twice the season prize money leader in 2001 and 2017.</p>
-
-                <p class="mb-0 text-white-50" align="justify">Williams has won four Olympic gold medals, one in singles and three in women's doubles, along with a silver medal in mixed doubles, pulling even with Kathleen McKane Godfree for the most Olympic medals won by a male or female tennis player. She is the only tennis player to have won a medal at four Olympic Games. At the 2000 Sydney Olympics, Williams became only the second player to win Olympic gold medals in both singles and doubles at one Olympic Games, after Helen Wills Moody at the 1924 Summer Olympics.</p>
-
-                <p class="mb-0 text-white-50" align="justify">With 49 singles titles, Williams trails only her sister Serena Williams among active players on the WTA Tour with most singles titles. Her 35-match winning streak from the 2000 Wimbledon Championships to the 2000 Generali Ladies Linz tournament final is the longest since January 1, 2000. She is also one of only three active WTA players to have reached the finals of all four Grand Slams, along with Serena Williams and Maria Sharapova.</p>
-                
+                <h4 class="text-white" style="font-size: 1.6rem">Is it a robust result?</h4>
+                <p class="mb-0 text-white" align="justify" style="font-size: 1.1rem">It is. After 50 iterations, the model's results variated only 0.001.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-5 center">
-          <div class="bg-black text-center h-100 project">
+        <div>
+          <div class="bg-grey text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Roger Federer</h4>
-                <p class="mb-0 text-white-50" align="justify">Roger Federer (born 8 August 1981) is a Swiss professional tennis player who is ranked world No. 3 in men's singles tennis by the Association of Tennis Professionals (ATP). He has won 20 Grand Slam singles titles—the most in history by a male player—and has held the world No. 1 spot in the ATP rankings for a record total of 310 weeks (including a record 237 consecutive weeks) and was the year-end No. 1 five times, including four consecutive. Federer, who turned professional in 1998, was continuously ranked in the top ten from October 2002 to November 2016.</p>
-
-                <p class="mb-0 text-white-50" align="justify">Federer has won a record eight Wimbledon titles, six Australian Open titles, five US Open titles (all consecutive, a record), and one French Open title. He is one of eight men to have achieved a Career Grand Slam. Federer has reached a record 31 men's singles Grand Slam finals, including 10 consecutively from the 2005 Wimbledon Championships to the 2007 US Open. Federer has also won a record six ATP Finals titles, 28 ATP Tour Masters 1000 titles, and a record 24 ATP Tour 500 titles. Federer was a member of Switzerland's winning Davis Cup team in 2014. He is also the only player after Jimmy Connors to have won 100 or more career singles titles, as well as to amass 1,200 wins in the Open Era.</p>
-
-                <p class="mb-0 text-white-50" align="justify">Federer's all-court game and versatile style of play involve exceptional footwork and shot-making. Effective both as a baseliner and a volleyer, his apparent effortlessness and efficient movement on the court have made Federer highly popular among tennis fans. He has received the tour Sportsmanship Award 13 times and been named the ATP Player of the Year and ITF World Champion five times. He has won the Laureus World Sportsman of the Year award a record five times, including four consecutive awards from 2005 to 2008. He is also the only person to have won the BBC Overseas Sports Personality of the Year award four times.</p>
+                <h4 class="text-white" style="font-size: 1.6rem">Is there the same bias for every field of occupation?</h4>
+                <p class="mb-0 text-white" align="justify" style="font-size: 1.1rem">For the military and religion fields the confidence interval of the predictions is much widder and we can't afirm the existance of a bias.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-xl-12 col-lg-6" align="center">
-          <div class="inter-text text-center text-center" >
-            <p class="text-black-50 mb-0" align="justify">When we observe these two overviews, we cannot spot many difference in terms of the words used to describe them. In both cases, they are described as "professional tennis player", it is an emphasis on their awards and performance along their careers and some insight about other personal details.</p>
-          </div>
-
-          <div class="inter-text text-center text-center">
-            <h3>But, what if we took a deeper look?</h3>
-          </div>
-
-          <div class="inter-text text-center text-center">
-            <p class="text-black-50 mb-0" align="justify">In order to analyse if there exists a difference between the descriptions based on the gender, we have developed a model using machine learning techniques. This model receives as input a series of words appearing in the overview we want to analyse. Its output is the probability that the overview belongs to a woman.</p>
-            <p class="text-black-50 mb-0" align="justify">The idea behind this model is that if both genders are equally described, the model won't be able to identify the corresponding gender. In case it is able to perform an assignment, it means there is something in the data that can be learnt in order to identifying the gender. In other words, it means there is a bias.</p>
-          </div>
-        
-        </div>
-      <!-- Project Two Row -->
-      <div class="row justify-content-center no-gutters">
-        <div class="col-lg-5">
-          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">MODEL STUFF</h4>
-                <p class="mb-0 text-white-50">HERE WE SHOULD PUT SOMETHING RELATED TO THE MODEL, THE WORDS SCORING HIGHER AND SO ON</p>
-                <hr class="d-none d-lg-block mb-0 mr-0">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
 
 
-      <!--Linguistic bias explanation--> 
-      <div class="container">
-          <div class="inter-text text-center" >
-            <p class="text-black-50 mb-0" align="justify">Given the previous results, we can state there is a bias in the adjective usage based on gender.</p>
-            <p class="text-black-50 mb-0" align="justify">Linguistic biases is defined as a systematic asymmetry in word choice that reflects the social-category cognitions that are applied to the described group or individual(s).</p>
-          </div>
-        
-        </div>
-      
+  </div>
+</div>
+</div>
+
+
+      <!-- How did our model perform -->
+
+      <!-- Is it a general result -->
+
+      <!-- Is it true for every field of occupation -->
+
 
     </div>
   </section>
