@@ -22,7 +22,7 @@
 </head>
 
 <body id="page-top">
-  
+
   <!-- Topic bias -->
   <section id="topic-bias" class="projects-section bg-light">
     <div class="container">
@@ -39,12 +39,12 @@
         <h3>According to Wikipedia</h3>
       </div>
 
-      <p class='inter-text text-black-50 mb-0' align='justify'>In order to quantify these differences we trained a machines learning model. This model takes as input different words appearing in the overview of the biographies and aims to predict the gender of the person being described. The idea behind it is that if both genders are described in the same way, the model won’t be able to predict better than random (it is 50% in a balanced dataset). On the other hand, if the model can do better, it means there is a pattern to learn from the data and that actually, the bias is there. 
+      <p class='inter-text text-black-50 mb-0' align='justify'>In order to quantify these differences we trained a machines learning model. This model takes as input different words appearing in the overview of the biographies and aims to predict the gender of the person being described. The idea behind it is that if both genders are described in the same way, the model won’t be able to predict better than random (it is 50% in a balanced dataset). On the other hand, if the model can do better, it means there is a pattern to learn from the data and that actually, the bias is there.
         </p>
 
 
       <!-- Featured Project Row -->
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <!-- <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
           <img class="img-fluid mb-3 mb-lg-0" src="../img/bg-masthead.jpg" alt="">
         </div>
@@ -54,43 +54,53 @@
             <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Project One Row -->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="../img/demo-image-01.jpg" alt="">
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
+      <div class="row">
+      <div class="col-lg-4">
+          <div class="bg-grey text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Misty</h4>
-                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <h4 class="text-white">How did the model perform?</h4>
+                  <p class="mb-0 text-white" align="justify">54% of the observations were correctly predicted, confirming that the bias does exist. </p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
-        </div>
       </div>
-
-      <!-- Project Two Row -->
-      <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="../img/demo-image-02.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-center h-100 project">
+      <div class="col-lg-4">
+          <div class="bg-grey text-center h-100 project">
             <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Mountains</h4>
-                <div w3-include-html="try.html"></div> 
-                <hr class="d-none d-lg-block mb-0 mr-0">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white" style="font-size: 1.5rem">Is it a general result?</h4>
+                <p class="mb-0 text-white" align="justify" style="font-size: 1.2rem">It is. After 50 iterations, the model's results variated only 0.001.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
-        </div>
       </div>
+      <div class="col-lg-4">
+          <div class="bg-grey text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Is it true for every field of occupation?</h4>
+                <p class="mb-0 text-white" align="justify">No, it's not. For the military and reliction fields the model predicted a random score several times. Som we cannot state that there's a linguistic bias.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <!-- How did our model perform -->
+
+      <!-- Is it a general result -->
+
+      <!-- Is it true for every field of occupation -->
+
 
     </div>
   </section>
