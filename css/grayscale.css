@@ -348,6 +348,10 @@ a:focus, a:hover {
   background-color: rgba(173,188,165, 0.5) !important;
 }
 
+.bg-dark-red {
+  background-color: #90323D !important;
+}
+
 
 .bg-primary {
   background-color: #64a19d !important;
@@ -359,6 +363,11 @@ a:focus, a:hover {
 
 .text-black {
   color: #000000 !important;
+
+}
+
+.text-dark-red {
+  color: #90323D !important;
 
 }
 
