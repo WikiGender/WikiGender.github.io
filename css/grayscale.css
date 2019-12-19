@@ -16,7 +16,7 @@
 
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 #mainNav .navbar-toggler {
@@ -34,17 +34,18 @@
   color: #161616;
   font-weight: 700;
   padding: .9rem 0;
+
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+  color: black;
   outline: none;
-  background-color: transparent;
+  background-color: white;
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
-  background-color: transparent;
+  background-color: white;
 }
 
 @media (min-width: 992px) {
@@ -52,23 +53,23 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: white;
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.5);
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.5);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: #64a19d
   }
   #mainNav .nav-link:active {
-    color: white;
+    color: black;
   }
   #mainNav.navbar-shrink {
     background-color: #fff;
@@ -100,7 +101,7 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/women_in_wiki2.png");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/wiki-gender.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
