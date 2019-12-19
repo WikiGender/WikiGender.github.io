@@ -9,7 +9,8 @@
   <meta name='author' content=''>
   <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 
-  <link rel="icon" href="https://p7.hiclipart.com/preview/352/387/804/wikipedia-logo-wikimedia-foundation-computer-icons-tour-puzzle.jpg">
+  <!-- <link rel="icon" href="https://p7.hiclipart.com/preview/352/387/804/wikipedia-logo-wikimedia-foundation-computer-icons-tour-puzzle.jpg"> -->
+  <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/unigrid-phantom-nature-vol-2/60/009_058_animal_unicorn_horse_magic_fable_myth_virgin-512.png">
   <title>WikiGender - Exploring linguistic bias in the overview of Wikipedia biographies</title>
 
   <!-- Bootstrap core CSS -->
@@ -218,10 +219,10 @@ function includeHTML() {
       <div class='row'>
         <div class='col-lg-8 mx-auto'>
           <h1 class='text-white mb-4' style="font-size: 5rem"> Did you know...</h1>
-          <h2 class='text-white mb-4'>Only 17% of the more than 1.3 million biographies in the English version of Wikipedia are related to women.</h2>
-          <h3 class='text-white mb-4'>Surprised? Well, so were we</h3>
-          <p class='text-white-50' style="font-size: 1.2rem">It is clear that women biographies are a minority in Wikipedia, but how are these biographies actually written, how do people describe men and women on this platform.
-            On this web page, we try to answer the previous question by analyzing the overview section in each of the studied biographies.
+          <h2 class='text-white mb-4'>With more than 9 billion visits per month over the last year, English Wikipedia is one of the main sources of information, so its articles can shape and influence the way people think.</h2>
+          <h3 class='text-white mb-4'>Is there a difference?</h3>
+          <p class='text-white-50' style="font-size: 1.2rem">
+            In an ideal world, people should be described neutrally, in an objective way and without stereotypes. However, historically women have been described mainly by their physical appearance and have been usually related to their family role, whereas men have been related to their careers. Is this thought present in Wikipedia’s Biographies? If it is, to what extent?
           </p>
         </div>
       
@@ -235,23 +236,19 @@ function includeHTML() {
 
       <!-- Fact-check -->
       <div class='inter-text text-black-50 mb-0 text-center'>
-        <p></p>
-        <h1>Wikipedia Fact-check </h1>
+        <h1>The underrepresentation of women in Wikipedia</h1>
       </div>
 
       <div class="row align-items-center no-gutters mb-4 mb-lg-2">
-        <div>
-          <p class="inter-text-without-padding text-black-50 mb-0" align="justify"> First things first, let us start with a quick fact-check about Wikipedia’s biographies.
-            On average, men's biographies have a longer overview section than women's overviews, 10% longer to be exact.
+
+          <p class="inter-text text-black-50 mb-0" align="justify"> 
+            Did you know that only 17% of the more than 1.4 million biographies in Wikipedia belong to women? Surprised?  So were we!
+            Not only that, on average, men’s overviews are longer than women’s, 10% longer to be exact.
           </p>
-        </div>
 
-      </div>
+          <p class="inter-text text-black-50 mb-0" align="justify"> Most biographies belong to recognized people in their fields. There is a huge variety of occupations, ranging from very general descriptions like ‘writer’ or ‘athlete’ to more detailed ones such as ‘midfielder’ for footballers or ‘song writer’. All these occupations can be grouped into 10 different fields of occupations. 
+        </p>
 
-      <!-- Comment about distribution -->
-      <div>
-        <p class="inter-text-without-padding text-black-50 mb-0" align="justify"> One thing you may think at this point is, "okey but not everyone appears in Wikipedia". This is actually true. Although it is possible to create your own Wikipedia page, most biographies belong to people recognized in their field. So one detail we decided to explore further was the occupation of the different personalities. </p>
-        <p class="inter-text-without-padding text-black-50 mb-0 mb-lg-4" align="justify"> There is a huge variety of occupations, ranging from very general descriptions like “writer” or “athlete” to more detailed ones such as “midfielder” for footballers or “songwriter”. In order to obtain some informative results, we grouped the different occupations into 10  fields.</p>
       </div>
 
       
@@ -267,8 +264,8 @@ function includeHTML() {
         <div class="col-lg-4">
             <div class="d-flex h-100">
               <div class="featured-text-left w-100 my-auto text-center text-lg-left">
-                <h4 class="text-black">Field of Occupation distribution in Wikipedia biographies</h4>
-            <p class="mb-0 text-black-50" align="justify"> The field most represented among the different biographies is <span class="highlight-green"> Sports followed by Artists and Politics </span>. The following question came up straight forward: what’s the ratio of man:woman along with the different occupations?</p>
+                <h4 class="text-black">Athletes, Artists and Politicians</h4>
+            <p class="mb-0 text-black-50" align="justify"> Sports, artists and politicians represent the 73% of all the occupation fields in the biographies . </p>
               </div>
             </div>
         </div>
@@ -280,8 +277,8 @@ function includeHTML() {
         <div class="col-lg-5">
             <div class="d-flex h-100">
               <div class="featured-text-right w-100 my-auto text-center text-lg-right">
-                <h4 class="text-black">Field of Occupation by Gender in Wikipedia biographies</h4>
-            <p class="mb-0 text-black-50" align="justify"> In almost all the 10 fields, men represent a majority,  more than 2 men per every woman. The only exception was the Modeling industry, in which women predominate. </p>
+                <h4 class="text-black">One woman, more that 3 men</h4>
+            <p class="mb-0 text-black-50" align="justify"> In almost all the 10 fields, men represent a majority. The only exception is the modeling industry, in which women predominate. </p>
               </div>
             </div>
           
@@ -294,7 +291,7 @@ function includeHTML() {
 
       <!-- comments ratio gender --> 
       <div class="inter-text text-black-50 mb-0 text-center">
-        <h4> Interesting Facts about occupations in Wikipedia:</h4>
+        <h4> Insights on occupations in Wikipedia:</h4>
       </div>
       <div class="row">
       <div class="col-lg-4">
@@ -334,9 +331,10 @@ function includeHTML() {
 
 
     <div>
-      <p class="inter-text text-black-50 mb-0" align="justify">  So far, we have seen that Wikipedia is different in terms of numbers for men and women, but is this platform different in terms of contents as well? If it does, can we find a statistical way of measuring such a difference? The answer is yes! you just need to continue reading :)</p>
 
-      <p class="inter-text text-black-50 mb-0 text-center" align="justify"> Our linguistic tour starts here!</p>
+      <p class="inter-text text-black-50 mb-0" align="justify"> 
+           So far, we have seen that Wikipedia is different in terms of numbers for men and women, but is this platform different in terms of contents as well?
+        </p>
     </div>
 
     </div>
@@ -348,16 +346,16 @@ function includeHTML() {
     <div class='container'>
 
       <div class='inter-text text-black-50 mb-0 text-center'>
-        <p></p>
-        <h1>A Linguistic Tour of Wikipedia's Biographies. </h1>
+        <h1>Gender stereotypes are still here</h1>
       </div>
 
       <!-- Intro Linguistic Bias -->
       <div>
-        <p class='inter-text text-black-50 mb-0 mb-lg-3' align='justify'>According to Wikipedia, linguistics is the scientific study of language. It involves analyzing language form and its meaning in context[1]. The previous is really important as we would like to understand the linguistics people use to portrait men and women.
+        <p class='inter-text text-black-50 mb-0' align='justify'>An in-depth analysis showed us that people writing on Wikipedia do not use neutral manners but biased ones to portray men and women. For example, think of the famous couple: Michael Douglas and Catherine Zeta-Jones, both have astonishing careers. They have been married for a while now and have 2 children together. 
+
         </p>
 
-        <p class='inter-text text-black-50 mb-0' align='justify'> We began this tour by studying the adjectives used in the overviews. Why not all the words? The reason is that adjectives can be highly subjective. It is not the same to say “He is a good actor” than “He is not a bad actor”. In other words, they allow the introduction of some more subjective perspective in what should be a completely objective description.
+        <p class='inter-text text-black-50 mb-0' align='justify'> If you look at the overview sections on their Wikipedia biographies, you can spot some differences in terms of the words used to describe them. 
 
         </p>
         <p class='inter-text text-black-50 mb-0' align='justify'>First, we extracted the different adjectives from the biographies and ranked them based on their subjectivity and strength. </p>
@@ -507,7 +505,7 @@ function includeHTML() {
   <div w3-include-html='html/topic-bias.html'></div> 
 
   <!-- Occupation bias -->
-  <div w3-include-html='html/occupation-bias.html'></div> 
+  <!-- <div w3-include-html='html/occupation-bias.html'></div>  -->
 
   <!-- Team -->
   <div w3-include-html='html/team.html'></div> 
