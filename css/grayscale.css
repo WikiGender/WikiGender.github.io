@@ -125,10 +125,47 @@
 }
 
 @media (min-width: 768px) {
-  .masthead h1 {
-    font-size: 4rem;
-    line-height: 4rem;
+  .masthead {position: relative;
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/wiki-gender.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
   }
+
+  .masthead h1 {
+  font-family: 'Varela Round';
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+}
+
+@media (min-width: 1px) {
+  .masthead {position: relative;
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/wiki-gender.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .masthead h1 {
+  font-family: 'Varela Round';
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 }
 
 @media (min-width: 992px) {
