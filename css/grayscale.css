@@ -341,6 +341,83 @@ a:focus, a:hover {
   background-color: rgba(169,195,194, 0.5) !important;
 }
 
+.bg-light-grey-occupations-m {
+  background-color: rgba(169,195,194, 0.5) !important;
+}
+
+.bg-light-grey-occupations-m .project-text {
+padding: 3rem;
+font-size: 90%;
+}
+
+
+
+.bg-light-grey-occupations-m:hover {
+  background: url("../img/militar.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-hover{
+  color: black;
+  padding: 3rem;
+  font-size: 90%;
+
+}
+
+.text-hover:hover{
+  color: rgba(0,0,0, 0.0);
+  padding: 3rem;
+  font-size: 90%;
+
+}
+
+.line-hover{
+  border-color: #64a19d;
+  border-width: .25rem;
+  width: 30%;
+
+}
+
+.line-hover:hover{
+  border-color: rgba(169,195,194, 0.0);
+  border-width: .25rem;
+  width: 30%;
+
+}
+
+.bg-light-grey-occupations-model {
+  background-color: rgba(169,195,194, 0.5) !important;
+}
+
+.bg-light-grey-occupations-model:hover {
+  background: url("../img/model.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-light-grey-occupations-model hr:hover {
+  color:rgba(169,195,194, 0.0)
+}
+.bg-light-grey-occupations-model hr: {
+  align-items: left;
+}
+
+
+.bg-light-grey-occupations-artist {
+  background-color: rgba(169,195,194, 0.5) !important;
+}
+
+.bg-light-grey-occupations-artist:hover {
+  background: url("../img/artist.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .bg-light-sand {
   background-color: rgba(217,202,179, 0.5) !important;
 }
