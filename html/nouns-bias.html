@@ -23,155 +23,155 @@
 
 <body id="page-top">
 
-  <!-- Topic bias -->
-  <section id="noun-bias" class="projects-section bg-light">
-    <div class="container">
+<!-- Adj pred bias -->
+<section id="noun-bias" class="projects-section bg-light">
+  <div class="container">
 
-      <div class='inter-text text-black-50 mb-0 text-center'>
-        <h1>Women are beautiful, Men are offensive</h1>
-        <h3>According to Wikipedia</h3>
-      </div>
+    <div class='inter-text text-black-50 mb-0 text-center'>
+      <h1>Women are beautiful, Men are offensive</h1>
+      <h3>According to Wikipedia</h3>
+    </div>
 
-      <p class='inter-text text-black-50 mb-0' align='justify'> In addition to be able to measure the bias, the model also provides us a way to explore which are the most predictive words for each gender and, therefore, the words that create the bias. In simple terms, when the words highly correlated with women are present in an overview, the biography will be more likely to be portraying a female than a male and vice versa.</p>
+    <p class='inter-text text-black-50 mb-0' align='justify'> In addition to be able to measure the bias, the model also provides us a way to explore which are the most predictive words for each gender and, therefore, the words that create the bias. In simple terms, when the words highly correlated with women are present in an overview, the biography will be more likely to be portraying a female than a male and vice versa.</p>
 
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
 
-        <table class="table table-borderless col-lg-8">
-          <thead>
-            <tr>
-              <th scope="col"  class="bg-dark-red text-white text-center">Top 5 predictive adjectives for women</th>
-              <th scope="col"  class="bg-light-sand text-center">Top 5 predictive adjectives for men</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-dark-red text-center"><h1><b>beautiful</h1></td>
-              <td class="text-center"><h1><b>offensive</h1></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h2><b>profit</h2></td>
-              <td class="text-center"><h2><b>certain</h2></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h3><b>cross</b></h3></td>
-              <td class="text-center"><h3><b>hard</b></h3></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h4><b>creative</b></h4></td>
-              <td class="text-center"><h4><b>defensive</b></h4></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h5><b>romantic</b></h5></td>
-              <td class="text-center"><h5><b>diplomatic</b></h5></td>
-            </tr>
-          </tbody>
-        </table>
+      <table class="table table-borderless col-lg-8">
+        <thead>
+        <tr>
+          <th scope="col"  class="bg-dark-red text-white text-center">Top 5 predictive adjectives for women</th>
+          <th scope="col"  class="bg-light-sand text-center">Top 5 predictive adjectives for men</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="text-dark-red text-center"><h1><b>beautiful</h1></td>
+          <td class="text-center"><h1><b>offensive</h1></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h2><b>profit</h2></td>
+          <td class="text-center"><h2><b>certain</h2></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h3><b>cross</b></h3></td>
+          <td class="text-center"><h3><b>hard</b></h3></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h4><b>creative</b></h4></td>
+          <td class="text-center"><h4><b>defensive</b></h4></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h5><b>romantic</b></h5></td>
+          <td class="text-center"><h5><b>diplomatic</b></h5></td>
+        </tr>
+        </tbody>
+      </table>
 
-      </div>
+    </div>
 
-      
+    <p class='inter-text text-black-50 mb-0' align='justify'>
+      We evaluated the subjectivity of the obtained adjectives using the subjectivity lexicon dictionary. Results show that adjectives related to men are weakly subjective and most of them have a negative connotation, whereas the ones related to women are mostly strong subjective and have a positive connotation. Therefore, the overviews portraying females are more likely to contain subjectivity.
+    </p>
 
-        <p class='inter-text text-black-50 mb-0' align='justify'>
-          We evaluated the subjectivity of the obtained adjectives using the subjectivity lexicon dictionary. Results show that adjectives related to men are weakly subjective and most of them have a negative connotation, whereas the ones related to women are mostly strong subjective and have a positive connotation. Therefore, the overviews portraying females are more likely to contain subjectivity. 
-        </p>
 
-      <div class='inter-text text-black-50 mb-0 text-center'>
-        <h3>Putting words in context</h3>
+    <!-- Adj + nouns pred bias -->
+    <div class='inter-text text-black-50 mb-0 text-center'>
+      <h1>Are women indeed related to family and men to their careers?</h1>
+    </div>
 
-      </div>
-        <p class='inter-text text-black-50 mb-0' align='justify'>
-          In order to make results clearer we put the adjectives in context. The following sentences show us how these words are used in different overviews from Wikipedia. 
-        </p>
+    <p class='inter-text text-black-50 mb-0' align='justify'>We extend the analysis by including nouns, increasing the total number of words explored. By adding the nouns, we can explore the bias also in terms of topics.
+      Using the same model as we mentioned before, the accuracy score achieved in this case is much higher. It means that the differences in that case are not that subtle and start to be easier to detect.
+      The result shows us those words that are more predictive for the two different genders.
+    </p>
 
-      <!-- QUOTE 1 --> 
-      <blockquote class="blockquote">
-        <p class="mb-0"><i class="fas fa-quote-left"></i>By the late 1930s, she was becoming stereotyped as the <strong class="text-dark-red">beautiful</strong>, innocent, self-sacrificing woman, and film work became harder for her to obtain.<i class="fas fa-quote-right"></i></p>
-        
-        <footer class="blockquote-footer" style="padding: 0.5rem">Overview of Ann Harding in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Ann_Harding" target="_blank"><i>Wikipedia</i></a></cite></footer>
-      </blockquote>
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <table class="table table-borderless col-lg-8">
+        <thead>
+        <tr>
+          <th scope="col"  class="bg-dark-red text-white text-center">Top 5 predictive words for women</th>
+          <th scope="col"  class="bg-light-sand text-center">Top 5 predictive words for men</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="text-dark-red text-center"><h1><b>person</h1></td>
+          <td class="text-center"><h1><b>football</h1></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h2><b>marriage</h2></td>
+          <td class="text-center"><h2><b>musician</h2></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h3><b>model</b></h3></td>
+          <td class="text-center"><h3><b>officer</b></h3></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h4><b>dancer</b></h4></td>
+          <td class="text-center"><h4><b>war</b></h4></td>
+        </tr>
+        <tr>
+          <td class="text-dark-red text-center"><h5><b>midfielder</b></h5></td>
+          <td class="text-center"><h5><b>footballer</b></h5></td>
+        </tr>
+        </tbody>
+      </table>
 
-      <!-- QUOTE 2 --> 
-      <blockquote class="blockquote">
-        <p class="mb-0" style="padding: 0.5rem; text-align-last: right;"><i class="fas fa-quote-left"></i>Cureton was a dominant <strong class="text-dark-brown">offensive</strong> guard and also played on the defensive line for three seasons (53-54-55) on UCLA football teams [...].<i class="fas fa-quote-right"></i></p>
-        
-        <footer class="blockquote-footer" style="padding: 0.5rem; text-align-last: right;">Overview of Hardiman Cureton in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Hardiman_Cureton" target="_blank"><i>Wikipedia</i></a></cite></footer>
-      </blockquote>
+    </div>
 
-      <!-- QUOTE 3 --> 
-      <blockquote class="blockquote">
-        <p class="mb-0" ><i class="fas fa-quote-left"></i>She is a founder of the non-<strong class="text-dark-red">profit</strong> Seed Global Health. Her father is John Kerry, who served as the 68th United States Secretary of State.<i class="fas fa-quote-right"></i></p>
-        
-        <footer class="blockquote-footer" style="padding: 0.5rem">Overview of Vanessa Kerry in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Vanessa_Kerry" target="_blank"><i>Wikipedia</i></a></cite></footer>
-      </blockquote>
+    <p class='inter-text text-black-50 mb-0' align='justify'>Other words that scored high for women are <strong style="color: #90323d">activist, spouse and single</strong> while for men are <strong style="color: #746a5c">death, director and head</strong>.
+    </p>
 
-      <!-- QUOTE 4 --> 
-      <blockquote class="blockquote">
-        <p class="mb-0" style="padding: 0.5rem; text-align-last: right;"><i class="fas fa-quote-left"></i> As the chief of detective he reformed that branch by assigning detectives to specialize in <strong class="text-dark-brown">certain</strong> crimes rather than just investigating whatever cases came their way when they were on shift.<i class="fas fa-quote-right"></i></p>
-        
-        <footer class="blockquote-footer" style="padding: 0.5rem; text-align-last: right;">Overview of Albert Seedmang in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Albert_Seedman" target="_blank"><i>Wikipedia</i></a></cite></footer>
-      </blockquote>
+    <p class='inter-text text-black-50 mb-0' align='justify'>These words reflect how some topics are more likely to appear in an overview given the gender. The Empath library allows to assure that indeed the overviews of <strong>women are related to family</strong>, whereas the ones portraying <strong>men are mostly related to business and sports</strong>.
+    </p>
 
-      
+    <!-- QUOTES -->
+    <div class='inter-text text-black-50 mb-0 text-center'>
+      <h2>Putting words in context</h2>
 
-      <div class='inter-text text-black-50 mb-0 text-center'>
-        <h1>Are women indeed related to family and men to their careers?</h1>
-      </div>
+    </div>
+    <p class='inter-text text-black-50 mb-0' align='justify'>
+      In order to make results clearer we put the adjectives and nouns in context. The following sentences show us how these words are used in different overviews from Wikipedia.
+    </p>
 
-       <p class='inter-text text-black-50 mb-0' align='justify'>We extend the analysis by including nouns, increasing the total number of words explored. By adding the nouns, we can explore the bias also in terms of topics. 
-        Using the same model as we mentioned before, the accuracy score achieved in this case is much higher. It means that the differences in that case are not that subtle and start to be easier to detect. 
-        The result shows us those words that are more predictive for the two different genders. 
-        </p>
+    <!-- QUOTE 1 ADJ - WOMAN-->
+    <blockquote class="blockquote">
+      <p class="mb-0"><i class="fas fa-quote-left"></i>By the late 1930s, she was becoming stereotyped as the <strong class="text-dark-red">beautiful</strong>, innocent, self-sacrificing woman, and film work became harder for her to obtain.<i class="fas fa-quote-right"></i></p>
 
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <table class="table table-borderless col-lg-8">
-          <thead>
-            <tr>
-              <th scope="col"  class="bg-dark-red text-white text-center">Top 5 predictive words for women</th>
-              <th scope="col"  class="bg-light-sand text-center">Top 5 predictive words for men</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-dark-red text-center"><h1><b>person</h1></td>
-              <td class="text-center"><h1><b>football</h1></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h2><b>marriage</h2></td>
-              <td class="text-center"><h2><b>musician</h2></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h3><b>model</b></h3></td>
-              <td class="text-center"><h3><b>officer</b></h3></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h4><b>dancer</b></h4></td>
-              <td class="text-center"><h4><b>war</b></h4></td>
-            </tr>
-            <tr>
-              <td class="text-dark-red text-center"><h5><b>midfielder</b></h5></td>
-              <td class="text-center"><h5><b>footballer</b></h5></td>
-            </tr>
-          </tbody>
-        </table>
+      <footer class="blockquote-footer" style="padding: 0.5rem">Overview of Ann Harding in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Ann_Harding" target="_blank"><i>Wikipedia</i></a></cite></footer>
+    </blockquote>
 
-      </div>
+    <!-- QUOTE 2 ADJ - MAN-->
+    <blockquote class="blockquote">
+      <p class="mb-0" style="padding: 0.5rem; text-align-last: right;"><i class="fas fa-quote-left"></i>Cureton was a dominant <strong class="text-dark-brown">offensive</strong> guard and also played on the defensive line for three seasons (53-54-55) on UCLA football teams [...].<i class="fas fa-quote-right"></i></p>
 
-      <p class='inter-text text-black-50 mb-0' align='justify'>Other words that scored high for women are <strong style="color: #90323d">activist, spouse and single</strong> while for men are <strong style="color: #746a5c">death, director and head</strong>.
-        </p>
+      <footer class="blockquote-footer" style="padding: 0.5rem; text-align-last: right;">Overview of Hardiman Cureton in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Hardiman_Cureton" target="_blank"><i>Wikipedia</i></a></cite></footer>
+    </blockquote>
 
-      <p class='inter-text text-black-50 mb-0' align='justify'>These words reflect how some topics are more likely to appear in an overview given the gender. The Empath library allows to assure that indeed the overviews of <strong>women are related to family</strong>, whereas the ones portraying <strong>men are mostly related to business and sports</strong>.
-      </p>
+    <!-- QUOTE 3 NOUN - WOMAN-->
+    <blockquote class="blockquote">
+      <p class="mb-0" ><i class="fas fa-quote-left"></i>Mary's <strong class="text-dark-red">marriage</strong> to Sigismund of Luxembourg, a member of the imperial Luxembourg dynasty, was already decided before her first birthday.
+        <i class="fas fa-quote-right"></i></p>
+
+      <footer class="blockquote-footer" style="padding: 0.5rem">Overview of Maria of Anjou in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Mary,_Queen_of_Hungary" target="_blank"><i>Wikipedia</i></a></cite></footer>
+    </blockquote>
+
+    <!-- QUOTE 4 NOUN - MAN-->
+    <blockquote class="blockquote">
+      <p class="mb-0" style="padding: 0.5rem; text-align-last: right;"><i class="fas fa-quote-left"></i>Jake Joseph Clifford Adelson is an Australian professional <strong class="text-dark-brown">footballer</strong> who last played as a right back or right winger for Newcastle Jets.<i class="fas fa-quote-right"></i></p>
+
+      <footer class="blockquote-footer" style="padding: 0.5rem; text-align-last: right;">Overview of Jake Adelson in <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Jake_Adelson" target="_blank"><i>Wikipedia</i></a></cite></footer>
+    </blockquote>
 
 
   </div>
-</div>
-</div>
+  </div>
+  </div>
 
 
 
 
-    </div>
-  </section>
+  </div>
+</section>
 
 </body>
 
