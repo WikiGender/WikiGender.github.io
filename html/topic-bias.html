@@ -35,7 +35,7 @@
         </p>
 
 
-      <p class='inter-text text-black-50 mb-0' align='justify'>In order to quantify these differences we trained a <strong>machine learning model</strong>. This model takes as input different words appearing in the overview of the biographies and aims to predict the gender of the person being described. The idea behind it is that if both genders are described in the same way, the model won’t be able to predict better than random (it is 50% in a balanced dataset). On the other hand, if the model can do better, it means there is a <strong>pattern to learn</strong> from the data and that actually, the bias is there.
+      <p class='inter-text text-black-50 mb-0' align='justify'>In order to quantify these differences we trained a <strong>machine learning model</strong>. This model takes as input different words appearing in the overview of the biographies and aims to predict the gender of the person being described. The idea behind it is that if both genders are described in the same way, the model won’t be able to predict better than random (it is 50% in a balanced dataset). On the other hand, if the model can do better than this, it means there is a <strong>pattern to learn</strong> from the data and that there is actually a bias.
       </p>
 
       <p class='inter-text text-black-50 mb-0' align='justify'>In this first part we perform the analysis using only the <strong>adjectives</strong>. We focus on this part of speech since it is used to perform descriptions and therefore is more prone to <strong>introduce subjectivity</strong> in the text. 
@@ -51,7 +51,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <h4 class="text-black" style="font-size: 1.6rem">How does the model really work? </h4>
-                  <p class="mb-0 text-black" align="justify" style="font-size: 1.1rem"> We use a logistic regression model that takes as input a bag of words and outputs the probability that the encoded overview belongs to a woman. The encoding is done as a bag of words, it means a binary vector that signals if a word is present in the text or not. The vocabulary is build with the set of 100 most common words for men and the top 100 for women.</p>
+                  <p class="mb-0 text-black" align="justify" style="font-size: 1.1rem"> We use a logistic regression model which performs a binary classification. It takes as input a bag of words and outputs the probability that the encoded overview belongs to a woman. The input encoding is therefore a binary vector that signals if a word is present in the text or not. The vocabulary is build with the set of 100 most common words for men and the top 100 for women.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <h4 class="text-white" style="font-size: 1.6rem">Is there the same bias for every field of occupation?</h4>
-                <p class="mb-0 text-white" align="justify" style="font-size: 1.1rem">For the military and religion fields the confidence interval of the predictions is much wider and we can't claim the existence of a bias.</p>
+                <p class="mb-0 text-white" align="justify" style="font-size: 1.1rem">For the military and religion fields the confidence interval of the predictions is much wider and we cannot claim the existence of a bias.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
