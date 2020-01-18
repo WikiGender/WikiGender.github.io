@@ -229,12 +229,10 @@
   font-size: 1.5rem;
 }
 
-/*
 
-@media (max-width: 700px) {
+
+@media (min-width: 600px) {
   .about-section p {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
     margin-bottom: 5rem;
     font-size: 1.2rem;
   }
@@ -242,21 +240,28 @@
   .about-section h1 {
   font-size: 5rem;
   }
+  .about-section h3 {
+  font-size: 1.5rem;
+  }
+
 }
 
-@media (max-width: 50px) {
+@media (max-width: 600px) {
   .about-section p {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-    margin-bottom: 5rem;
     font-size: 0.8rem;
   }
 
   .about-section h1 {
   font-size: 3rem;
   }
+  .about-section h2 {
+  font-size: 2rem;
+  }
+  .about-section h3 {
+  font-size: 1.2rem;
+  }
 }
-**/
+
 
 
 .projects-section {
@@ -265,18 +270,6 @@
 
 .projects-section .featured-text {
   padding: 2rem;
-}
-
-@media (min-width: 992px) {
-  .projects-section .featured-text-left {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
-
-  .projects-section .featured-text-right {
-    padding: 0 2rem 0 0;
-    border-right: 0.5rem solid #64a19d;
-  }
 }
 
 .projects-section .project-text {
@@ -305,14 +298,22 @@
   font-weight: bold;
 }
 
-
-
 .projects-section .inter-text-without-padding {
   padding: 1rem;
   font-size: 120%;
 }
 
 @media (min-width: 992px) {
+  .projects-section .featured-text-left {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
+
+  .projects-section .featured-text-right {
+    padding: 0 2rem 0 0;
+    border-right: 0.5rem solid #64a19d;
+  }
+
   .projects-section .project-text {
     padding: 3rem;
   }
@@ -320,6 +321,72 @@
     border-color: #64a19d;
     border-width: .25rem;
     width: 30%;
+  }
+}
+
+@media (min-width: 600px) {
+  .about-section p {
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+  }
+
+  .about-section h1 {
+  font-size: 5rem;
+  }
+  .about-section h3 {
+  font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .projects-section .featured-text {
+  padding: 2rem;
+}
+
+.projects-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+.projects-section .inter-text {
+  padding: 2rem;
+  font-size: 120%;
+}
+
+
+.projects-section .highlight-main{
+  color: #64A19D;
+  font-weight: bold;
+}
+
+.projects-section .highlight-red{
+  color: #90323d;
+  font-weight: bold;
+}
+
+.projects-section .highlight-brown{
+  color: #3e3629;
+  font-weight: bold;
+}
+
+.projects-section .inter-text-without-padding {
+  padding: 1rem;
+  font-size: 120%;
+}
+
+  .projects-section p {
+    font-size: 0.9rem;
+  }
+
+  .projects-section h1 {
+  font-size: 2rem;
+  }
+  .projects-section h2 {
+  font-size: 1.5rem;
+  }
+  .projects-section h3 {
+  font-size: 1.1rem;
   }
 }
 
